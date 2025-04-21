@@ -1,6 +1,6 @@
 ![Coding](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
-# 👋 Hi, I'm Temirkhan
+# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> Hi, I'm Temirkhan
 
 ### Full-Stack Developer / Software Engineer · Based in Kazakhstan 🇰🇿
 
