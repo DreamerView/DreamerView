@@ -50,12 +50,6 @@ My goal is to create things that actually solve problems.
 - 🧼 **Clean Code** — code that reads like a story
 
 ---
-
-## 📊 GitHub Stats
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=temirkhan&layout=compact&langs_count=10&theme=tokyonight&hide_title=true)  
-![Temirkhan's GitHub stats](https://github-readme-stats.vercel.app/api?username=temirkhan&show_icons=true&theme=tokyonight)
-
 ---
 
 ## 🧠 My Language Proficiency (Self-Assessed)
