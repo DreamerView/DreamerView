@@ -50,7 +50,6 @@ My goal is to create things that actually solve problems.
 - 🧼 **Clean Code** — code that reads like a story
 
 ---
----
 
 ## 🧠 My Language Proficiency (Self-Assessed)
 
