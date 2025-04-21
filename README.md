@@ -58,6 +58,22 @@ My goal is to create things that actually solve problems.
 
 ---
 
+## 🧠 My Language Proficiency (Self-Assessed)
+
+<p align="center">
+  <img src="https://progress-bar.dev/95/?title=JavaScript&width=130&color=00cc66&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/85/?title=PHP&width=130&color=007aa5&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/85/?title=MySQL&width=130&color=f29111&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/90/?title=Node.js&width=130&color=3c873a&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/95/?title=HTML%2FCSS&width=130&color=e34c26&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/80/?title=Next.js&width=130&color=000000&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/80/?title=Electron&width=130&color=47848f&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/60/?title=Python&width=130&color=3776AB&radius=100&type=circle" />
+  <img src="https://progress-bar.dev/90/?title=Linux%2FCLI&width=130&color=ffcc00&radius=100&type=circle" />
+</p>
+
+---
+
 ## 📫 Reach Me
 
 - Instagram: [@temirkhanrustemov](https://www.instagram.com/temirkhanrustemov/)
