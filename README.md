@@ -1,4 +1,6 @@
-# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>  Hi, I'm Temirkhan
+![Coding](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
+
+# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> Hi, I'm Temirkhan
 
 ### Full-Stack Developer / Software Engineer · Based in Kazakhstan 🇰🇿
 
@@ -11,23 +13,23 @@ My goal is to create things that actually solve problems.
 ## 💻 Tech Stack I Use Daily
 
 ### 🌐 Frontend
-- 🟨 **JavaScript / ES6+** — clean, efficient, no unnecessary frameworks
-- 🧩 **HTML5 / CSS3 / Bootstrap** — responsive, minimalist UIs
-- ⚡ **Next.js** — SEO-friendly single-page apps with SSR
-- 🖥 **Electron.js** — desktop apps with native system access
+- <img src="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif" width="20"/> **JavaScript / ES6+**
+- <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="20"/> **HTML5 / CSS3 / Bootstrap**
+- ⚡ **Next.js**
+- 🖥 **Electron.js**
 
 ### 🧠 Backend
-- 🟩 **Node.js + Express** — my go-to for APIs and tools
-- 🐘 **PHP** — for lightweight LAMP projects
-- 🐬 **MySQL** — transactions, joins, indexes, and optimization
-- 📡 **WebSockets / Socket.IO** — for real-time systems and live tracking
-- 🤖 **Telegram Bot API** — for bots that notify, respond, and assist
+- <img src="https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif" width="20"/> **Node.js + Express**
+- 🐘 **PHP**
+- 🐬 **MySQL**
+- 📡 **WebSockets / Socket.IO**
+- 🤖 **Telegram Bot API**
 
 ### ⚙️ Dev Tools & Other
-- 🐧 **Linux** — development and deployment environment
-- 🌐 **Apache2 / Nginx** — domain configs, SSL, virtual hosts, reverse proxy
-- ⏰ **Cron Jobs** — task automation and scheduling
-- 📦 **Service Workers / Caching** — offline support and fast loading
+- 🐧 **Linux**
+- 🌐 **Apache2 / Nginx**
+- ⏰ **Cron Jobs**
+- 📦 **Service Workers / Caching**
 
 ---
 
