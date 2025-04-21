@@ -53,6 +53,13 @@ My goal is to create things that actually solve problems.
 
 ---
 
+## 📊 GitHub Stats
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=temirkhan&layout=compact&langs_count=10&theme=tokyonight&hide_title=true)  
+![Temirkhan's GitHub stats](https://github-readme-stats.vercel.app/api?username=temirkhan&show_icons=true&theme=tokyonight)
+
+---
+
 ## 📫 Reach Me
 
 - Instagram: [@temirkhanrustemov](https://www.instagram.com/temirkhanrustemov/)
