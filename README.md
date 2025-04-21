@@ -60,17 +60,15 @@ My goal is to create things that actually solve problems.
 
 ## 🧠 My Language Proficiency (Self-Assessed)
 
-<p align="center">
-  <img src="https://progress-bar.dev/95/?title=JavaScript&width=130&color=00cc66&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/85/?title=PHP&width=130&color=007aa5&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/85/?title=MySQL&width=130&color=f29111&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/90/?title=Node.js&width=130&color=3c873a&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/95/?title=HTML%2FCSS&width=130&color=e34c26&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/80/?title=Next.js&width=130&color=000000&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/80/?title=Electron&width=130&color=47848f&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/60/?title=Python&width=130&color=3776AB&radius=100&type=circle" />
-  <img src="https://progress-bar.dev/90/?title=Linux%2FCLI&width=130&color=ffcc00&radius=100&type=circle" />
-</p>
+![JavaScript](https://img.shields.io/badge/JavaScript-95%25-brightgreen)
+![PHP](https://img.shields.io/badge/PHP-85%25-blue)
+![MySQL](https://img.shields.io/badge/MySQL-85%25-orange)
+![Node.js](https://img.shields.io/badge/Node.js-90%25-success)
+![HTML/CSS](https://img.shields.io/badge/HTML/CSS-95%25-red)
+![Next.js](https://img.shields.io/badge/Next.js-80%25-black)
+![Electron](https://img.shields.io/badge/Electron-80%25-cyan)
+![Python](https://img.shields.io/badge/Python-60%25-blue)
+![Linux/CLI](https://img.shields.io/badge/Linux/CLI-90%25-yellow)
 
 ---
 
