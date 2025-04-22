@@ -1,0 +1,35 @@
+@media only screen and (max-width: 700px) and (min-width: 0px) {
+    .ratioBlock1 {
+        aspect-ratio: 3/2;
+    }
+
+    .ratioBlock2 {
+        aspect-ratio: 3/2;
+    }
+
+    .articleRatioBlock {
+        aspect-ratio: 4/2;
+    }
+
+    .navFont {
+        font-size:24px;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    .ratioBlock1 {
+        aspect-ratio: 4/2;
+    }
+
+    .ratioBlock2 {
+        aspect-ratio: 3/2;
+    }
+
+    .articleRatioBlock {
+        aspect-ratio: 3/2;
+    }
+
+    .navFont {
+        font-size:16px;
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temirkhan Rustemov Profile</title>
+    <link rel="preload" href="/source/style/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/source/style/bootstrap-icons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/source/style/bootstrap.min.css">
+        <link rel="stylesheet" href="/source/style/bootstrap-icons.min.css">
+    </noscript>
+    <script src="/source/script/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="/preloader.css" />
+</head>
+
+<body>
+    <div id="preloader"
+        style="width:100vw;height:100dvh;background-color:#ffffff;position:fixed;display:flex;align-items:center;justify-content:center;z-index:9999;">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="py-md-5 py-4">
+        <header class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <a target="_blank" title="About Karaganda" class="btn btn-outline-dark border rounded-5"
+                href="https://en.wikipedia.org/wiki/Karaganda">🌍 Karagandy, Kazakhstan</a>
+            <a target="_blank" title="Go to my Github"
+                class="btn btn-dark rounded-5 d-inline-flex gap-2 align-items-center"
+                href="https://github.com/DreamerView"><img loading="lazy" width="auto" height="24"
+                    src="/images/github.svg">Github</a>
+        </header>
+        <div class="container">
+            <div class="w-100 d-flex flex-column align-items-center pt-5">
+                <div class="rounded-circle bg-body border" style="width:150px;height:150px;">
+                    <img class="w-100 h-auto rounded-circle border" loading="lazy" src="/avatar.webp" alt="" />
+                </div>
+                <h4 class="m-0 mt-4">Temirkhan Rustemov</h4>
+                <p class="m-0 mt-4 text-center text-secondary" style="max-width:400px;width:100%;">👨🏻‍💻 Full-Stack
+                    Developer. Passionate about clean code and building useful products.</p>
+            </div>
+            <div class="d-flex justify-content-md-center w-100 gap-3 mt-4 overflow-x-auto position-sticky top-0 bg-body py-3">
+                <button onclick="loadComponent('my-apps')" class="btn btn-outline-dark border text-nowrap rounded-4">📲 Apps</button>
+                <button onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4">👨🏻‍💻 Solutions</button>
+                <button onclick="loadComponent('my-products')" class="btn btn-outline-dark border text-nowrap rounded-4">📦 Products</button>
+                <button class="btn btn-outline-dark border text-nowrap rounded-4">🗂️ Works</button>
+            </div>
+            <div class="w-100 component mt-5" id="my-apps">
+                <div class="row mx-auto" id="render-my-apps">
+
+                </div>
+            </div>
+            <div class="w-100 component d-none mt-5" id="my-solutions">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Library/Class</th>
+                            <th scope="col">Source</th>
+                        </tr>
+                    </thead>
+                    <tbody id="render-my-solutions">
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-100 component mt-5" id="my-products">
+                <div class="row mx-auto" id="render-my-products">
+
+                </div>
+            </div>
+        </div>
+        <footer class="text-center mt-5 border-top mx-auto" style="max-width:900px;width:calc(100% - 32px);">
+            <p></p>Built with ❤️ by <strong>Temirkhan</strong></p>
+            <p>My <a target="_blank" href="https://github.com/DreamerView">Github</a></p>
+        </footer>
+        <script>
+            const loadComponent = (componentId) => {
+                document.querySelectorAll(".component").forEach(el => el.classList.add("d-none"));
+                document.getElementById(componentId).classList.remove("d-none");
+                switch(componentId) {
+                    case "my-apps":loadMyApps();break;
+                    case "my-solutions":loadMySolutions();break;
+                    case "my-products":loadMyProducts();break;
+                    default: ""; break;
+                }
+            };
+            const loadMySolutions = () => {
+                const list = [
+                    {
+                        title:"🛠️ SimpleMySQL — Lightweight MySQL Library for PHP",
+                        source:"https://github.com/DreamerView/simple-mysql"
+                    }
+                ];
+                const render = list.map(html=>`<tr><td>${html.title}</td><td><a class="btn btn-dark rounded-4" target="_blank" href="${html.source}">Github</a></td></tr>`).join();
+                document.getElementById("render-my-solutions").innerHTML = render;
+            }
+            const loadMyProducts = () => {
+                const list = [
+                    {
+                        title: "🌐 Okki Browser",
+                        repo: "https://github.com/DreamerView/okki-browser",
+                        image: "/images/products/browser.gif"
+                    },
+                    {
+                        title: "🗄 Okki Database",
+                        repo: "https://github.com/DreamerView/okki-database",
+                        image: "/images/products/database.gif"
+                    },
+                    {
+                        title: "🗄 Okki Study",
+                        repo: "https://github.com/DreamerView/okki-study",
+                        demo: "https://academy.zarubilim.kz/",
+                        image: "/images/products/study.png"
+                    }
+                ];
+                const render = list.map(html =>
+                    `<div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                        <div class="w-100 h-auto bg-body border rounded-4" style="aspect-ratio: 12/8;">
+                            <img class="w-100 h-auto border rounded-4" loading="lazy" style="object-fit: cover;aspect-ratio: 12/8;" src="${html.image}" alt=""/>
+                        </div>
+                        <h6 class="m-0 my-3">${html.title}</h6>
+                        ${html.demo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-primary rounded-5 p-0 px-3 py-1" href="${html.demo}">Demo</a>`: ""}
+                        ${html.repo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-dark rounded-5 p-0 px-3 py-1" href="${html.repo}">Github</a>`: ""}
+                    </div>`
+                ).join("");
+                document.getElementById("render-my-products").innerHTML = render;
+            };
+            const loadMyApps = () => {
+                const list = [{
+                        title: "💱 Currency Converter – National Bank of Kazakhstan",
+                        demo: "https://dreamerview.github.io/kz-currency-converter-app",
+                        repo: "https://github.com/DreamerView/kz-currency-converter-app",
+                        image: "/images/apps/currency.png"
+                    },
+                    {
+                        title: "⏰ Alarm Clock App",
+                        demo: "https://dreamerview.github.io/alarm-clock-app/",
+                        repo: "https://github.com/DreamerView/alarm-clock-app",
+                        image: "/images/apps/alarm-clock-app.png"
+                    },
+                    {
+                        title: "🧮 Counter App",
+                        demo: "https://dreamerview.github.io/counter-app/",
+                        repo: "https://github.com/DreamerView/counter-app",
+                        image: "/images/apps/counter.png"
+                    },
+                    {
+                        title: "🌤 Weather App – Geo-based Forecast with Open-Meteo API",
+                        demo: "https://dreamerview.github.io/weather-forecast/",
+                        repo: "https://github.com/DreamerView/weather-forecast",
+                        image: "/images/apps/weather.png"
+                    },
+                    {
+                        title: "🎮 Tic Tac Toe – Classic Game",
+                        demo: "https://dreamerview.github.io/weather-forecast/",
+                        repo: "https://github.com/DreamerView/weather-forecast",
+                        image: "/images/apps/weather.png"
+                    },
+                    {
+                        title: "Okki Apps",
+                        demo: "https://okki.vercel.app",
+                        repo: "https://github.com/DreamerView/okki",
+                        image: "/images/apps/okki-apps.png"
+                    }
+                ];
+                const render = list.map(html =>
+                    `<div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                        <div class="w-100 h-auto bg-body border rounded-4" style="aspect-ratio: 12/8;">
+                            <img class="w-100 h-auto border rounded-4" loading="lazy" style="object-fit: cover;aspect-ratio: 12/8;" src="${html.image}" alt=""/>
+                        </div>
+                        <h6 class="m-0 my-3">${html.title}</h6>
+                        <a target="_blank" style="font-size: 0.8rem;" class="btn btn-primary rounded-5 p-0 px-3 py-1" href="${html.demo}">Demo</a>
+                        <a target="_blank" style="font-size: 0.8rem;" class="btn btn-dark rounded-5 p-0 px-3 py-1" href="${html.repo}">Github</a>
+                    </div>`
+                ).join("");
+                document.getElementById("render-my-apps").innerHTML = render;
+            };
+            window.addEventListener("load", loadMyApps);
+            window.addEventListener("load", () => {
+                setTimeout(() => document.getElementById("preloader").style.display = "none", 1000);
+            })
+        </script>
+    </div>
+</body>
+
+</html>
