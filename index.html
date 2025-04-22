@@ -50,10 +50,10 @@
                     Developer. Passionate about clean code and building useful products.</p>
             </div>
             <div class="d-flex justify-content-md-center w-100 gap-3 mt-4 overflow-x-auto position-sticky top-0 bg-body py-3">
-                <button onclick="loadComponent('my-apps')" class="btn btn-outline-dark border text-nowrap rounded-4">📲 Apps</button>
-                <button onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4">👨🏻‍💻 Solutions</button>
-                <button onclick="loadComponent('my-products')" class="btn btn-outline-dark border text-nowrap rounded-4">📦 Products</button>
-                <button class="btn btn-outline-dark border text-nowrap rounded-4">🗂️ Works</button>
+                <button data-btn="my-apps" onclick="loadComponent('my-apps')" class="btn btn-dark border text-nowrap rounded-4 nav-btn">📲 Apps</button>
+                <button data-btn="my-solutions" onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">👨🏻‍💻 Solutions</button>
+                <button data-btn="my-products" onclick="loadComponent('my-products')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">📦 Products</button>
+                <button data-btn="my-works" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">🗂️ Works</button>
             </div>
             <div class="w-100 component mt-5" id="my-apps">
                 <div class="row mx-auto" id="render-my-apps">
@@ -84,6 +84,11 @@
         </footer>
         <script>
             const loadComponent = (componentId) => {
+                document.querySelectorAll(".nav-btn").forEach(el => {
+                    const isActive = el.getAttribute("data-btn") === componentId;
+                    el.classList.toggle("btn-dark", isActive);
+                    el.classList.toggle("btn-outline-dark", !isActive);
+                });
                 document.querySelectorAll(".component").forEach(el => el.classList.add("d-none"));
                 document.getElementById(componentId).classList.remove("d-none");
                 switch(componentId) {
