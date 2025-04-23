@@ -102,26 +102,30 @@
                 const list = [
                     {
                         title:"🛠️ SimpleMySQL — Lightweight MySQL Library for PHP",
+                        desc:"It’s designed to make SQL interaction in your PHP projects easier, cleaner, and safer — no frameworks required!",
                         source:"https://github.com/DreamerView/simple-mysql"
                     }
                 ];
-                const render = list.map(html=>`<tr><td>${html.title}</td><td><a class="btn btn-dark rounded-4" target="_blank" href="${html.source}">Github</a></td></tr>`).join();
+                const render = list.map(html=>`<tr><td><h5>${html.title}</h5><p class="m-0 mt-3 text-secondary" style="font-size:0.9rem;">${html.desc}</p></td><td class="align-middle"><a class="btn btn-dark rounded-4" target="_blank" href="${html.source}">Github</a></td></tr>`).join();
                 document.getElementById("render-my-solutions").innerHTML = render;
             }
             const loadMyProducts = () => {
                 const list = [
                     {
                         title: "🌐 Okki Browser",
+                        desc:"It’s designed to be minimal, fast, and clean — giving you a desktop web experience with full control over the UI and behavior.",
                         repo: "https://github.com/DreamerView/okki-browser",
                         image: "images/products/browser.gif"
                     },
                     {
                         title: "🗄 Okki Database",
+                        desc:"Okki Database is a standalone desktop application designed for viewing SQL databases with a clean and intuitive interface.",
                         repo: "https://github.com/DreamerView/okki-database",
                         image: "images/products/database.gif"
                     },
                     {
                         title: "🗄 Okki Study",
+                        desc:"Okki Study is a lightweight education platform for creating and managing online courses, groups, and students.",
                         repo: "https://github.com/DreamerView/okki-study",
                         demo: "https://academy.zarubilim.kz/",
                         image: "images/products/study.png"
@@ -133,6 +137,7 @@
                             <img class="w-100 h-auto border rounded-4" loading="lazy" style="object-fit: cover;aspect-ratio: 12/8;" src="${html.image}" alt=""/>
                         </div>
                         <h6 class="m-0 my-3">${html.title}</h6>
+                        ${html.desc ? `<p class="m-o mt-2 text-secondary" style="font-size:0.9rem;">${html.desc}</p>`:""}
                         ${html.demo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-primary rounded-5 p-0 px-3 py-1" href="${html.demo}">Demo</a>`: ""}
                         ${html.repo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-dark rounded-5 p-0 px-3 py-1" href="${html.repo}">Github</a>`: ""}
                     </div>`
@@ -142,36 +147,42 @@
             const loadMyApps = () => {
                 const list = [{
                         title: "💱 Currency Converter – National Bank of Kazakhstan",
+                        desc:"Clean, responsive currency converter using HTML, ES6, Bootstrap 5.3, with rates from the National Bank of Kazakhstan (RSS).",
                         demo: "https://dreamerview.github.io/kz-currency-converter-app",
                         repo: "https://github.com/DreamerView/kz-currency-converter-app",
                         image: "images/apps/currency.png"
                     },
                     {
                         title: "⏰ Alarm Clock App",
+                        desc:"A responsive and lightweight alarm clock app built with HTML, JavaScript (ES6), and Bootstrap 5.3.",
                         demo: "https://dreamerview.github.io/alarm-clock-app/",
                         repo: "https://github.com/DreamerView/alarm-clock-app",
                         image: "images/apps/alarm-clock-app.png"
                     },
                     {
                         title: "🧮 Counter App",
+                        desc:"A minimal, fast, and responsive counter application built using HTML, JavaScript (ES6), and Bootstrap 5.3.",
                         demo: "https://dreamerview.github.io/counter-app/",
                         repo: "https://github.com/DreamerView/counter-app",
                         image: "images/apps/counter.png"
                     },
                     {
                         title: "🌤 Weather App – Geo-based Forecast with Open-Meteo API",
+                        desc:"A responsive weather application that detects your geolocation and displays current weather + 7-day forecast using the Open-Meteo API.",
                         demo: "https://dreamerview.github.io/weather-forecast/",
                         repo: "https://github.com/DreamerView/weather-forecast",
                         image: "images/apps/weather.png"
                     },
                     {
                         title: "🎮 Tic Tac Toe – Classic Game",
+                        desc:"A simple and responsive Tic Tac Toe game built with HTML, CSS, JavaScript (ES6), and Bootstrap 5.3.",
                         demo: "https://dreamerview.github.io/tic-tac-toe/",
                         repo: "https://github.com/DreamerView/tic-tac-toe",
                         image: "images/apps/tic-tac-toe.png"
                     },
                     {
-                        title: "Okki Apps",
+                        title: "📲 Okki Apps",
+                        desc:"A modern web-based mini application built with Next.js and Node.js, designed to function like a standalone web store app.",
                         demo: "https://okki.vercel.app",
                         repo: "https://github.com/DreamerView/okki",
                         image: "images/apps/okki-apps.png"
@@ -183,6 +194,7 @@
                             <img class="w-100 h-auto border rounded-4" loading="lazy" style="object-fit: cover;aspect-ratio: 12/8;" src="${html.image}" alt=""/>
                         </div>
                         <h6 class="m-0 my-3">${html.title}</h6>
+                        ${html.desc ? `<p class="m-o mt-2 text-secondary" style="font-size:0.9rem;">${html.desc}</p>`:""}
                         <a target="_blank" style="font-size: 0.8rem;" class="btn btn-primary rounded-5 p-0 px-3 py-1" href="${html.demo}">Demo</a>
                         <a target="_blank" style="font-size: 0.8rem;" class="btn btn-dark rounded-5 p-0 px-3 py-1" href="${html.repo}">Github</a>
                     </div>`
