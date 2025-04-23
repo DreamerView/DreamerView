@@ -68,7 +68,7 @@
                 <button data-btn="my-apps" onclick="loadComponent('my-apps')" class="btn btn-dark border text-nowrap rounded-4 nav-btn">📲 Apps</button>
                 <button data-btn="my-solutions" onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">👨🏻‍💻 Solutions</button>
                 <button data-btn="my-products" onclick="loadComponent('my-products')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">📦 Products</button>
-                <button data-btn="my-works" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">🗂️ Works</button>
+                <button data-btn="my-works" onclick="loadComponent('my-works')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">🗂️ Works</button>
             </div>
             <div class="w-100 component mt-5" id="my-apps">
                 <div class="row mx-auto" id="render-my-apps">
@@ -87,8 +87,13 @@
                     </tbody>
                 </table>
             </div>
-            <div class="w-100 component mt-5" id="my-products">
+            <div class="w-100 component d-none mt-5" id="my-products">
                 <div class="row mx-auto" id="render-my-products">
+
+                </div>
+            </div>
+            <div class="w-100 component d-none mt-5" id="my-works">
+                <div class="row mx-auto" id="render-my-works">
 
                 </div>
             </div>
@@ -109,6 +114,7 @@
                     case "my-apps":loadMyApps();break;
                     case "my-solutions":loadMySolutions();break;
                     case "my-products":loadMyProducts();break;
+                    case "my-works":loadMyWorks();break;
                     default: ""; break;
                 }
             };
@@ -157,6 +163,57 @@
                     </div>`
                 ).join("");
                 document.getElementById("render-my-products").innerHTML = render;
+            };
+            const loadMyWorks = () => {
+                const list = [
+                    {
+                        title: "🌐 Business Engineering KZ Website",
+                        demo: "https://bekz.kz",
+                        image: "images/works/bekz.webp"
+                    },
+                    {
+                        title: "🌐 Mobilab Website",
+                        demo: "https://mobilab.kz",
+                        image: "images/works/mobilab.webp"
+                    },
+                    {
+                        title: "🌐 Zaru Bilim Website",
+                        demo: "https://zarubilim.kz",
+                        image: "images/works/zarubilim.webp"
+                    },
+                    {
+                        title: "🌐 Bala Alany Website",
+                        demo: "https://bala-alany.kz",
+                        image: "images/works/bala.webp"
+                    },
+                    {
+                        title: "🌐 Captain Baby Website",
+                        demo: "https://captain-baby.shop",
+                        image: "images/works/bala.webp"
+                    },
+                    {
+                        title: "🌐 Captain Baby Website",
+                        demo: "https://captain-baby.shop",
+                        image: "images/works/captain.webp"
+                    },
+                    {
+                        title: "🌐 KVPTK IS",
+                        demo: "https://web.kvptk.edu.kz",
+                        image: "images/works/kvptk.webp"
+                    },
+                ];
+                const render = list.map(html =>
+                    `<div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="w-100 h-auto bg-body border rounded-4" style="aspect-ratio: 17/9;">
+                            <img class="w-100 h-auto border rounded-4" loading="lazy" style="object-fit: cover;aspect-ratio: 17/9;" src="${html.image}" alt=""/>
+                        </div>
+                        <h6 class="m-0 my-3">${html.title}</h6>
+                        ${html.desc ? `<p class="m-o mt-2 text-secondary" style="font-size:0.9rem;">${html.desc}</p>`:""}
+                        ${html.demo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-primary rounded-5 p-0 px-3 py-1" href="${html.demo}">Demo</a>`: ""}
+                        ${html.repo ? `<a target="_blank" style="font-size: 0.8rem;" class="btn btn-dark rounded-5 p-0 px-3 py-1" href="${html.repo}">Github</a>`: ""}
+                    </div>`
+                ).join("");
+                document.getElementById("render-my-works").innerHTML = render;
             };
             const loadMyApps = () => {
                 const list = [{
