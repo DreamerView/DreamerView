@@ -64,18 +64,80 @@
                 <p class="m-0 mt-4 text-center text-secondary" style="max-width:400px;width:100%;">👨🏻‍💻 Full-Stack
                     Developer. Passionate about clean code and building useful products.</p>
             </div>
-            <div class="d-flex justify-content-md-center w-100 gap-3 mt-4 overflow-x-auto position-sticky top-0 bg-body py-3">
-                <button data-btn="my-apps" onclick="loadComponent('my-apps')" class="btn btn-dark border text-nowrap rounded-4 nav-btn">📲 Apps</button>
-                <button data-btn="my-solutions" onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">👨🏻‍💻 Solutions</button>
+            <div class="d-flex justify-content-md-center w-100 gap-3 overflow-x-auto position-sticky top-0 bg-body my-4 py-3">
+                <button data-btn="my-info" onclick="loadComponent('my-info')" class="btn btn-dark border text-nowrap rounded-4 nav-btn">👨🏻‍💻 About me</button>
+                <button data-btn="my-apps" onclick="loadComponent('my-apps')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">📲 Apps</button>
+                <button data-btn="my-solutions" onclick="loadComponent('my-solutions')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">🚀 Solutions</button>
                 <button data-btn="my-products" onclick="loadComponent('my-products')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">📦 Products</button>
                 <button data-btn="my-works" onclick="loadComponent('my-works')" class="btn btn-outline-dark border text-nowrap rounded-4 nav-btn">🗂️ Works</button>
             </div>
-            <div class="w-100 component mt-5" id="my-apps">
+            <div class="w-100 component" id="my-info">
+                <div class="row gap-4 gap-md-0">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="bg-body-tertiary border rounded-4 p-3 text-white" data-bs-theme="dark">
+                            <h4 class="m-0 pb-3 mb-3 border-bottom">👋🏻 Hi, I'm <b>Temirkhan</b></h4>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">👨🏻‍💻 Full-Stack Developer / Software Engineer</p>
+                            <p class="m-0 mb-3 pb-3 border-bottom" style="font-size:0.9rem">🌍 Based in Kazakhstan 🇰🇿</p>
+                            <p style="font-size:0.8rem">I'm <b>Temirkhan</b>, a developer focused on building fast, lightweight, and user-friendly web tools.</p>
+                            <p style="font-size:0.8rem">I care deeply about clean code, performance, and minimalism.</p>
+                            <p style="font-size:0.8rem" class="m-0">My goal is to create things that actually solve problems.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <div class="bg-body-tertiary border rounded-4 p-3 text-white"  data-bs-theme="dark">
+                            <div class="row gap-4 gap-md-0">
+                                <div class="col-md-4">
+                                    <h4 class="m-0 mb-4 pb-3 border-bottom">🌐 Frontend</h4>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🟨 JavaScript / ES6+</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🎨 HTML5 / CSS3 / Bootstrap</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🚀 React.js</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">⚡ Next.js</p>
+                                    <p style="font-size:0.9rem" class="m-0">🖥️ Electron.js</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4 class="m-0 mb-4 pb-3 border-bottom">🧠 Backend</h4>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🌿 Node.js + Express</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🐘 PHP</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🐬 MySQL</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">📡 WebSockets / Socket.IO</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🤖 Telegram Bot API</p>
+                                    <p style="font-size:0.9rem" class="m-0">🐍 Python</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4 class="m-0 mb-4 pb-3 border-bottom">⚙️ Dev Tools & Other</h4>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🐧 Linux</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">🌐 Apache2 / Nginx</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">⏰ Cron Jobs</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">📦 Service Workers / Caching</p>
+                                    <p style="font-size:0.9rem" class="m-0 mb-3">📲 PWA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-md-4 mt-0">
+                        <div class="bg-body-tertiary border rounded-4 p-3 text-white" data-bs-theme="dark">
+                            <h4 class="m-0 pb-3 mb-3 border-bottom">🎯 Values & Mindset</h4>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">🧘‍♂️ <b>Minimalism</b> — less code, more function</p>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">⚡ <b>Performance</b> — apps should be lightning fast</p>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">🧠 <b>Purpose-built</b> — solving actual user problems</p>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">🧼 <b>Clean Code</b> — code that reads like a story</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt-md-4 mt-0">
+                        <div class="bg-body-tertiary border rounded-4 p-3 text-white" data-bs-theme="dark">
+                            <h4 class="m-0 pb-3 mb-3 border-bottom">📫 Reach Me</h4>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">📸 Instagram: <a href="https://instagram.com/temirkhanrustemov">@temirkhanrustemov</a></p>
+                            <p class="m-0 mb-2" style="font-size:0.9rem">📧 Email: <a href="mailto:temirkhan.onyx@gmail.com">temirkhan.onyx@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 component" id="my-apps">
                 <div class="row mx-auto" id="render-my-apps">
 
                 </div>
             </div>
-            <div class="w-100 component d-none mt-5" id="my-solutions">
+            <div class="w-100 component d-none" id="my-solutions">
                 <table class="table">
                     <thead>
                         <tr>
@@ -87,12 +149,12 @@
                     </tbody>
                 </table>
             </div>
-            <div class="w-100 component d-none mt-5" id="my-products">
+            <div class="w-100 component d-none" id="my-products">
                 <div class="row mx-auto" id="render-my-products">
 
                 </div>
             </div>
-            <div class="w-100 component d-none mt-5" id="my-works">
+            <div class="w-100 component d-none" id="my-works">
                 <div class="row mx-auto" id="render-my-works">
 
                 </div>
@@ -318,7 +380,7 @@
                 ).join("");
                 document.getElementById("render-my-apps").innerHTML = render;
             };
-            window.addEventListener("load", loadMyApps);
+            // window.addEventListener("load", loadMyApps);
             window.addEventListener("load", () => {
                 setTimeout(() => document.getElementById("preloader").style.display = "none", 1000);
             })
