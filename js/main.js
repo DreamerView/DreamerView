@@ -89,6 +89,12 @@ const loadMyWorks = () => {
             image: "images/works/panakea.webp"
         },
         {
+            title: "🌐 Zaru Bilim Website",
+            desc: "Landing Page created in 2022",
+            demo: "https://zarubilim.kz",
+            image: "images/works/zarubilim.webp"
+        },
+        {
             title: "🌐 Business Engineering KZ Website",
             desc: "Landing Page created in 2023",
             demo: "https://bekz.kz",
@@ -99,18 +105,6 @@ const loadMyWorks = () => {
             desc: "Landing Page created in 2024",
             demo: "https://mobilab.kz",
             image: "images/works/mobilab.webp"
-        },
-        {
-            title: "🌐 Zaru Bilim Website",
-            desc: "Landing Page created in 2022",
-            demo: "https://zarubilim.kz",
-            image: "images/works/zarubilim.webp"
-        },
-        {
-            title: "🌐 Bala Alany Website",
-            desc: "Landing Page created in 2025",
-            demo: "https://bala-alany.kz",
-            image: "images/works/bala.webp"
         },
         {
             title: "🌐 Captain Baby Website",
@@ -125,6 +119,18 @@ const loadMyWorks = () => {
             image: "images/works/dreamway.webp"
         },
         {
+            title: "🌐 KVPTK IS",
+            desc: "Information System created in 2024",
+            demo: "https://web.kvptk.edu.kz",
+            image: "images/works/kvptk.webp"
+        },
+        {
+            title: "🌐 Bala Alany Website",
+            desc: "Landing Page created in 2025",
+            demo: "https://bala-alany.kz",
+            image: "images/works/bala.webp"
+        },
+        {
             title: "🌐 TechComAuto Website",
             desc: "Landing Page created in 2025",
             demo: "https://techcomauto.kz/",
@@ -135,12 +141,6 @@ const loadMyWorks = () => {
             desc: "Landing Page created in 2025",
             demo: "https://gpscontrol.kz/",
             image: "images/works/gps.webp"
-        },
-        {
-            title: "🌐 KVPTK IS",
-            desc: "Information System created in 2024",
-            demo: "https://web.kvptk.edu.kz",
-            image: "images/works/kvptk.webp"
         },
         {
             title: "💻 BEKZ CRM",
