@@ -58,6 +58,13 @@ const loadMyProducts = () => {
             demo: "https://folio.kz",
             repo: "https://github.com/DreamerView/okki-pages",
             image: "images/products/pages.webp"
+        },
+        {
+            title: "💻 SimpleML",
+            desc: "A simple web app for miniML – a custom Russian DSL for interactive markup input with instant HTML preview.",
+            demo: "https://dreamerview.github.io/simple-ml/",
+            repo: "https://github.com/DreamerView/simple-ml",
+            image: "images/products/simple-ml.webp"
         }
     ];
     const render = list.map(html =>
