@@ -136,6 +136,12 @@ const loadMyWorks = () => {
             demo: "https://web.kvptk.edu.kz",
             image: "images/works/kvptk.webp"
         },
+        {
+            title: "💻 BEKZ CRM",
+            desc: "Mini CRM system created in 2025",
+            demo: "https://crm.bekz.kz",
+            image: "images/works/crm-bekz.webp"
+        }
     ];
     const render = list.map(html =>
         `<div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
