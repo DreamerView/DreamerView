@@ -83,6 +83,12 @@ const loadMyProducts = () => {
 const loadMyWorks = () => {
     const list = [
         {
+            title: "🌐 Panakea shop",
+            desc: "Online Pharmacy Shop created in 2021",
+            demo: "https://dreamerview.github.io/view/products/3",
+            image: "images/works/panakea.webp"
+        },
+        {
             title: "🌐 Business Engineering KZ Website",
             desc: "Landing Page created in 2023",
             demo: "https://bekz.kz",
