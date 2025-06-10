@@ -65,6 +65,12 @@ const loadMyProducts = () => {
             demo: "https://dreamerview.github.io/simple-ml/",
             repo: "https://github.com/DreamerView/simple-ml",
             image: "images/products/simple-ml.webp"
+        },
+        {
+            title: "📊 Excel Preview",
+            desc: "Excel Preview is a lightweight web app to view .xlsx files in a spreadsheet-like table directly in the browser.",
+            repo: "https://github.com/DreamerView/excel-preview",
+            image: "images/products/excel-preview.webp"
         }
     ];
     const render = list.map(html =>
