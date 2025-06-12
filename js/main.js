@@ -230,6 +230,13 @@ const loadMyApps = () => {
         demo: "https://okki.vercel.app",
         repo: "https://github.com/DreamerView/okki",
         image: "images/apps/okki-apps.webp"
+    },
+    {
+        title: "🧠 Random Quote Machine",
+        desc: "Minimalist quote app using Bootstrap 5 & ES6+. Shows random quotes from the Quotable API in a clean, dark-themed interface.",
+        demo: "https://dreamerview.github.io/random-quote",
+        repo: "https://github.com/DreamerView/random-quote",
+        image: "images/apps/quote.webp"
     }
     ];
     const render = list.map(html =>
