@@ -131,6 +131,12 @@ const loadMyWorks = () => {
             image: "images/works/kvptk.webp"
         },
         {
+            title: "💻 Eco Business ASM",
+            desc: "Automated Monitoring System created in 2024",
+            demo: "https://www.linkedin.com/posts/activity-7293856873651339264-MQqQ/",
+            image: "images/works/eco-business.webp"
+        },
+        {
             title: "🌐 Bala Alany Website",
             desc: "Landing Page created in 2025",
             demo: "https://bala-alany.kz",
@@ -150,7 +156,7 @@ const loadMyWorks = () => {
         },
         {
             title: "💻 BEKZ CRM",
-            desc: "Mini CRM system created in 2025",
+            desc: "Content Resource Manager created in 2025",
             demo: "https://crm.bekz.kz",
             image: "images/works/crm-bekz.webp"
         }
