@@ -13,7 +13,7 @@ export default async function RootLayout({ children }) {
   const pathname = headersList.get('x-next-url') || '/';
   return (
     <html lang="en">
-      <body>
+      <body style={{overflowX:"hidden"}}>
         <PreloaderComponent />
         <HeaderSection ssrPath={pathname} />
         {children}

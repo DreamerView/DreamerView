@@ -66,9 +66,9 @@ export default function PreloaderComponent() {
     }
   }, [loadedCount, fontsReady]);
 
-  const highlightColor = '#1E90FF'; // Dodger Blue
-  const strokeColor = progress === 100 ? highlightColor : '#000';
-  const textColor = progress === 100 ? highlightColor : '#000';
+  const highlightColor = '#333'; // Dodger Blue
+  const strokeColor = progress === 100 ? highlightColor : '#777';
+  const textColor = progress === 100 ? highlightColor : '#777';
 
   return (
     <div
@@ -82,6 +82,7 @@ export default function PreloaderComponent() {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        overflow:'hidden'
       }}
     >
       <div style={{ position: 'relative', width: 180, height: 180 }}>
