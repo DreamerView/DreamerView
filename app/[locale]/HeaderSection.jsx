@@ -3,43 +3,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import avatar from '@/public/avatar.webp';
+import translate from '@/translate/header.json';
+import LanguageSwitcherModal from './LanguageSwitcherModal';
 
 const NavLinks = [
-  { href: '/', title: '👨🏻‍💻 About me' },
-  { href: '/apps', title: '📲 Apps' },
-  { href: '/solutions', title: '🚀 Solutions' },
-  { href: '/products', title: '📦 Products' },
-  { href: '/works', title: '🗂️ Works' },
-  { href: '/certificates', title: '🎓 Certificates' }
+  { href: '/', title: '👨🏻‍💻', main: 'about' },
+  { href: '/apps', title: '📲', main: 'apps' },
+  { href: '/solutions', title: '🚀', main: 'solutions' },
+  { href: '/products', title: '📦', main: 'products' },
+  { href: '/works', title: '🗂️', main: 'works' },
+  { href: '/certificates', title: '🎓', main: 'certificates' },
 ];
 
-export default function HeaderSection({ ssrPath = '/' }) {
+export default function HeaderSection({ locale }) {
   const pathname = usePathname();
-  const [currentPath, setCurrentPath] = useState(ssrPath);
-
-  useEffect(() => {
-    setCurrentPath(pathname);
-  }, [pathname]);
 
   return (
     <>
+      <LanguageSwitcherModal currentLocale={locale} pathname={pathname} />
       <header className="container d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          title="About Karaganda"
+        <button
           className="btn btn-outline-dark border rounded-5"
-          href="https://en.wikipedia.org/wiki/Karaganda"
+          data-bs-toggle="modal"
+          data-bs-target="#langModal"
         >
-          🌍 Karaganda, Kazakhstan
-        </a>
+          🌍 {translate['langSelect'][locale]}
+        </button>
 
         <a
           target="_blank"
           rel="noopener noreferrer"
-          title="Go to my Github"
           className="btn btn-dark rounded-5 d-inline-flex gap-2 align-items-center"
           href="https://github.com/DreamerView"
         >
@@ -64,7 +58,7 @@ export default function HeaderSection({ ssrPath = '/' }) {
           </div>
 
           <h4 className="m-0 mt-4">
-            Temirkhan Rustemov
+            {translate.fullname[locale]}
             <i className="ms-2 text-primary bi bi-patch-check-fill"></i>
           </h4>
 
@@ -72,22 +66,27 @@ export default function HeaderSection({ ssrPath = '/' }) {
             className="m-0 mt-4 text-center text-secondary"
             style={{ maxWidth: '400px', width: '100%' }}
           >
-            👨🏻‍💻 Full-Stack Developer. Passionate about clean code and building useful products.
+            👨🏻‍💻 {translate.desc[locale]}
           </p>
         </div>
 
         <div className="d-flex justify-content-md-center w-100 gap-3 overflow-x-auto position-sticky top-0 bg-body my-4 py-3">
-          {NavLinks.map((link, key) => (
-            <Link
-              key={key}
-              href={link.href}
-              className={`btn ${
-                currentPath === link.href ? 'btn-dark' : 'btn-outline-dark'
-              } border text-nowrap rounded-4 nav-btn`}
-            >
-              {link.title}
-            </Link>
-          ))}
+          {NavLinks.map((link, key) => {
+            const fullPath = `/${locale}${link.href==="/"?"":link.href}`;
+            const isActive = pathname === fullPath;
+
+            return (
+              <Link
+                key={key}
+                href={fullPath}
+                className={`btn ${
+                  isActive ? 'btn-dark' : 'btn-outline-dark'
+                } border text-nowrap rounded-4 nav-btn`}
+              >
+                {link.title} {translate[link.main][locale]}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>

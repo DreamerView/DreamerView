@@ -1,0 +1,47 @@
+{
+    "fullname": {
+        "kk": "Темирхан Рустемов",
+        "ru": "Темирхан Рустемов",
+        "en": "Temirkhan Rustemov"
+    },
+    "desc": {
+        "kk": "Full-Stack әзірлеуші. Таза кодқа және пайдалы өнімдер жасауға құштар.",
+        "ru": "Full-Stack разработчик. Увлечён чистым кодом и созданием полезных продуктов.",
+        "en": "Full-Stack Developer. Passionate about clean code and building useful products."
+    },
+    "about": {
+        "kk": "Мен туралы",
+        "ru": "Обо мне",
+        "en": "About me"
+    },
+    "apps": {
+        "kk": "Қосымшалар",
+        "ru": "Приложения",
+        "en": "Apps"
+    },
+    "solutions": {
+        "kk": "Шешімдер",
+        "ru": "Решения",
+        "en": "Solutions"
+    },
+    "products": {
+        "kk": "Өнімдер",
+        "ru": "Продукты",
+        "en": "Products"
+    },
+    "works": {
+        "kk": "Жұмыстар",
+        "ru": "Работы",
+        "en": "Works"
+    },
+    "certificates": {
+        "kk": "Сертификаттар",
+        "ru": "Сертификаты",
+        "en": "Certificates"
+    },
+    "langSelect": {
+        "kk": "Тілді ауыстыру",
+        "ru": "Сменить язык",
+        "en": "Change language"
+    }
+}

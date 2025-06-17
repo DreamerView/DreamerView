@@ -1,7 +1,31 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function PreloaderComponent() {
+export default function PreloaderComponent({ locale = 'en' }) {
+  const factsMap = {
+    en: [
+      '👋 Welcome to official website',
+      '👨‍💻 I started coding in 2019 from scratch',
+      '🚀 I founded Cardify — a digital business card service',
+      '🇰🇿 I’m from Kazakhstan and promote local IT products',
+      '🧠 I love building tools that simplify life',
+    ],
+    ru: [
+      '👋 Добро пожаловать на официальный сайт',
+      '👨‍💻 Я начал программировать с нуля в 2019 году',
+      '🚀 Я основал Cardify — цифровой сервис визиток',
+      '🇰🇿 Я из Казахстана и продвигаю локальные IT-продукты',
+      '🧠 Люблю создавать инструменты, упрощающие жизнь',
+    ],
+    kk: [
+      '👋 Ресми сайтқа қош келдіңіз',
+      '👨‍💻 Мен 2019 жылы нөлден бастап код жазуды бастадым',
+      '🚀 Мен Cardify цифрлық визитка сервисін құрдым',
+      '🇰🇿 Мен Қазақстаннанмын және жергілікті IT өнімдерді насихаттаймын',
+      '🧠 Мен өмірді жеңілдететін құралдарды жасағанды ​​ұнатамын',
+    ],
+  };
+
   const resources = [
     {
       type: 'css',
@@ -18,25 +42,51 @@ export default function PreloaderComponent() {
     },
   ];
 
+  const total = resources.length;
   const [loadedCount, setLoadedCount] = useState(0);
   const [fontsReadyCount, setFontsReadyCount] = useState(0);
-
-  const total = resources.length;
   const fontResources = resources.filter((r) => r.font);
   const fontsTotal = fontResources.length;
-
   const progress = Math.min(Math.round((loadedCount / total) * 100), 100);
   const fontsReady = fontsReadyCount === fontsTotal;
 
   useEffect(() => {
-    const facts = [
-      '👋 Welcome to official website',
-      '👨‍💻 I started coding in 2019 from scratch',
-      '🚀 I founded Cardify — a digital business card service',
-      '🇰🇿 I’m from Kazakhstan and promote local IT products',
-      '🧠 I love building tools that simplify life',
-    ];
+    resources.forEach(({ type, src, font }) => {
+      if (type === 'css') {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = src;
+        link.onload = () => setLoadedCount((c) => c + 1);
+        document.head.appendChild(link);
+        if (font) document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
+      } else if (type === 'js') {
+        const script = document.createElement('script');
+        script.src = src;
+        script.defer = true;
+        script.onload = () => setLoadedCount((c) => c + 1);
+        document.body.appendChild(script);
+      }
+    });
 
+    if (fontsTotal === 0) setFontsReadyCount(0);
+  }, []);
+
+  useEffect(() => {
+    if (loadedCount === total && fontsReady) {
+      const el = document.getElementById('preloader');
+      if (el) {
+        setTimeout(() => {
+          el.classList.add('fade-down');
+          el.style.pointerEvents = 'none';
+          setTimeout(() => el.remove(), 1000);
+        }, 500);
+      }
+    }
+  }, [loadedCount, fontsReady]);
+
+  // 🔁 Факты
+  useEffect(() => {
+    const facts = factsMap[locale] || factsMap.en;
     let index = 0;
     const el = document.getElementById('fact-text');
 
@@ -55,48 +105,7 @@ export default function PreloaderComponent() {
 
       return () => clearInterval(interval);
     }
-  }, []);
-
-
-  // Загрузка ресурсов
-  useEffect(() => {
-    resources.forEach(({ type, src, font }) => {
-      if (type === 'css') {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = src;
-        link.onload = () => setLoadedCount((c) => c + 1);
-        document.head.appendChild(link);
-        if (font) {
-          document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
-        }
-      } else if (type === 'js') {
-        const script = document.createElement('script');
-        script.src = src;
-        script.defer = true;
-        script.onload = () => setLoadedCount((c) => c + 1);
-        document.body.appendChild(script);
-      }
-    });
-
-    if (fontsTotal === 0) setFontsReadyCount(0);
-  }, []);
-
-  // Смена фактов с getElementById
-
-  // Скрытие прелоадера
-  useEffect(() => {
-    if (loadedCount === total && fontsReady) {
-      const el = document.getElementById('preloader');
-      if (el) {
-        setTimeout(() => {
-          el.classList.add('fade-down');
-          el.style.pointerEvents = 'none';
-          setTimeout(() => el.remove(), 1000);
-        }, 500);
-      }
-    }
-  }, [loadedCount, fontsReady]);
+  }, [locale]);
 
   const highlightColor = '#333';
   const strokeColor = progress === 100 ? highlightColor : '#777';
@@ -117,17 +126,9 @@ export default function PreloaderComponent() {
         overflow: 'hidden',
       }}
     >
-      {/* Круг загрузки */}
       <div style={{ position: 'relative', width: 180, height: 180 }}>
         <svg width="180" height="180">
-          <circle
-            cx="90"
-            cy="90"
-            r="75"
-            stroke="#eee"
-            strokeWidth="15"
-            fill="none"
-          />
+          <circle cx="90" cy="90" r="75" stroke="#eee" strokeWidth="15" fill="none" />
           <circle
             cx="90"
             cy="90"
@@ -160,23 +161,18 @@ export default function PreloaderComponent() {
         </div>
       </div>
 
-      {/* Факт через прямой JS */}
+      {/* Текст-факт */}
       <div
         id="fact-text"
+        className="text-center text-secondary small mt-4"
         style={{
-          marginTop: 30,
-          fontSize: '1rem',
-          color: '#555',
-          fontFamily: 'Arial, sans-serif',
-          textAlign: 'center',
-          maxWidth: 320,
-          minHeight: 24,
-          opacity: 1,
-          transform: 'translateY(0)',
+          fontSize: '0.9rem',
           transition: 'opacity 0.4s ease, transform 0.4s ease',
+          fontFamily: 'Arial, sans-serif',
+          minHeight: 24,
         }}
       >
-        👋 Welcome to official website
+        {factsMap[locale]?.[0] ?? factsMap.en[0]}
       </div>
 
       <style>{`
