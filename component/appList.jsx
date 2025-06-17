@@ -50,7 +50,7 @@ const AppList = ({list,locale}) => {
                                     width={800}
                                     height={400}
                                     style={{ objectFit: 'cover', aspectRatio: '17/9', cursor: 'zoom-in' }}
-                                    onClick={() => openFullImage(html.image.src,html.title)} // ✅ правильно
+                                    onClick={() => openFullImage(html.image.src,html.title[locale])} // ✅ правильно
                                 />
                             </div>
 
