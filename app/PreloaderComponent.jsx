@@ -16,19 +16,49 @@ export default function PreloaderComponent() {
       type: 'js',
       src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
     },
-    // Здесь можешь добавить любые font:true ресурсы с preload шрифтами
   ];
 
-  const total = resources.length;
   const [loadedCount, setLoadedCount] = useState(0);
   const [fontsReadyCount, setFontsReadyCount] = useState(0);
 
+  const total = resources.length;
   const fontResources = resources.filter((r) => r.font);
   const fontsTotal = fontResources.length;
 
   const progress = Math.min(Math.round((loadedCount / total) * 100), 100);
   const fontsReady = fontsReadyCount === fontsTotal;
 
+  useEffect(() => {
+    const facts = [
+      '👋 Welcome to official website',
+      '👨‍💻 I started coding in 2019 from scratch',
+      '🚀 I founded Cardify — a digital business card service',
+      '🇰🇿 I’m from Kazakhstan and promote local IT products',
+      '🧠 I love building tools that simplify life',
+    ];
+
+    let index = 0;
+    const el = document.getElementById('fact-text');
+
+    if (el) {
+      const interval = setInterval(() => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(10px)';
+
+        setTimeout(() => {
+          index = (index + 1) % facts.length;
+          el.innerText = facts[index];
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }, 400);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, []);
+
+
+  // Загрузка ресурсов
   useEffect(() => {
     resources.forEach(({ type, src, font }) => {
       if (type === 'css') {
@@ -37,7 +67,9 @@ export default function PreloaderComponent() {
         link.href = src;
         link.onload = () => setLoadedCount((c) => c + 1);
         document.head.appendChild(link);
-        if(font) document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
+        if (font) {
+          document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
+        }
       } else if (type === 'js') {
         const script = document.createElement('script');
         script.src = src;
@@ -47,12 +79,12 @@ export default function PreloaderComponent() {
       }
     });
 
-    // Если нет font ресурсов, считаем шрифты готовыми сразу
-    if (fontsTotal === 0) {
-      setFontsReadyCount(0);
-    }
+    if (fontsTotal === 0) setFontsReadyCount(0);
   }, []);
 
+  // Смена фактов с getElementById
+
+  // Скрытие прелоадера
   useEffect(() => {
     if (loadedCount === total && fontsReady) {
       const el = document.getElementById('preloader');
@@ -66,7 +98,7 @@ export default function PreloaderComponent() {
     }
   }, [loadedCount, fontsReady]);
 
-  const highlightColor = '#333'; // Dodger Blue
+  const highlightColor = '#333';
   const strokeColor = progress === 100 ? highlightColor : '#777';
   const textColor = progress === 100 ? highlightColor : '#777';
 
@@ -82,9 +114,10 @@ export default function PreloaderComponent() {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        overflow:'hidden'
+        overflow: 'hidden',
       }}
     >
+      {/* Круг загрузки */}
       <div style={{ position: 'relative', width: 180, height: 180 }}>
         <svg width="180" height="180">
           <circle
@@ -125,6 +158,25 @@ export default function PreloaderComponent() {
         >
           {progress}%
         </div>
+      </div>
+
+      {/* Факт через прямой JS */}
+      <div
+        id="fact-text"
+        style={{
+          marginTop: 30,
+          fontSize: '1rem',
+          color: '#555',
+          fontFamily: 'Arial, sans-serif',
+          textAlign: 'center',
+          maxWidth: 320,
+          minHeight: 24,
+          opacity: 1,
+          transform: 'translateY(0)',
+          transition: 'opacity 0.4s ease, transform 0.4s ease',
+        }}
+      >
+        👋 Welcome to official website
       </div>
 
       <style>{`
