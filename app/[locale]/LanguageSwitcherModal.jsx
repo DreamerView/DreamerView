@@ -34,7 +34,7 @@ export default function LanguageSwitcherModal({ currentLocale, pathname }) {
                                 <a
                                     key={locale}
                                     href={`/${locale}${cleanPath}`}
-                                    className={`btn btn-${locale === currentLocale ? 'secondary' : 'outline-secondary border-0'} rounded-4`}
+                                    className={`btn btn-${locale === currentLocale ? 'secondary opacity-50' : 'outline-secondary border-0'} rounded-4`}
                                 >
                                     {locale === 'kk' && '🇰🇿 Қазақша'}
                                     {locale === 'ru' && '🇷🇺 Русский'}
