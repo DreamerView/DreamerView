@@ -12,7 +12,7 @@ export default async function HomePage({ params }) {
           <div className="col-lg-4 col-md-6 col-12">
             <div className="bg-body-tertiary border rounded-5 p-4 text-white" data-bs-theme="dark">
               <h4 className="m-0 pb-3 mb-3 border-bottom">
-                {t.greeting} <b>Temirkhan</b>
+                {t.greeting}
               </h4>
               <p className="m-0 mb-2">{t.role}</p>
               <p className="m-0 mb-3 pb-3 border-bottom">{t.location}</p>
