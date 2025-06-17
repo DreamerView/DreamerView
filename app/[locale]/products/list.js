@@ -11,57 +11,121 @@ import keskinImg from '@/public/images/products/keskin.webp';
 
 const list = [
   {
-    title: "🌐 Okki Browser",
-    desc: "It’s designed to be minimal, fast, and clean — giving you a desktop web experience with full control over the UI and behavior.",
+    title: {
+      en: "🌐 Okki Browser",
+      ru: "🌐 Okki Браузер",
+      kk: "🌐 Okki Браузер",
+    },
+    desc: {
+      en: "It’s designed to be minimal, fast, and clean — giving you a desktop web experience with full control over the UI and behavior.",
+      ru: "Минималистичный, быстрый и чистый браузер с полным контролем над интерфейсом и поведением.",
+      kk: "Минималистік, жылдам және таза браузер — интерфейс пен әрекетті толық басқаруға мүмкіндік береді.",
+    },
     repo: "https://github.com/DreamerView/okki-browser",
-    image: browserImg
+    image: browserImg,
   },
   {
-    title: "🗄 Okki Database",
-    desc: "Okki Database is a standalone desktop application designed for viewing SQL databases with a clean and intuitive interface.",
+    title: {
+      en: "🗄 Okki Database",
+      ru: "🗄 Okki База Данных",
+      kk: "🗄 Okki Деректер Қоры",
+    },
+    desc: {
+      en: "Okki Database is a standalone desktop application designed for viewing SQL databases with a clean and intuitive interface.",
+      ru: "Приложение для просмотра SQL-баз данных с чистым и понятным интерфейсом.",
+      kk: "SQL деректер қорын көруге арналған таза және интуитивті интерфейсті жұмыс үстелі қосымшасы.",
+    },
     repo: "https://github.com/DreamerView/okki-database",
-    image: databaseImg
+    image: databaseImg,
   },
   {
-    title: "🗄 Okki Study",
-    desc: "Okki Study is a lightweight education platform for creating and managing online courses, groups, and students.",
+    title: {
+      en: "🗄 Okki Study",
+      ru: "🗄 Okki Обучение",
+      kk: "🗄 Okki Білім Платформасы",
+    },
+    desc: {
+      en: "Okki Study is a lightweight education platform for creating and managing online courses, groups, and students.",
+      ru: "Образовательная платформа для создания и управления курсами, группами и студентами.",
+      kk: "Онлайн курстарды, топтарды және студенттерді басқаруға арналған білім беру платформасы.",
+    },
     repo: "https://github.com/DreamerView/okki-study",
     demo: "https://academy.zarubilim.kz/",
-    image: studyImg
+    image: studyImg,
   },
   {
-    title: "🖥️ Okki Console Panel",
-    desc: "Lightweight local web file explorer with system info, extensions, and code preview — all in one clean dashboard.",
+    title: {
+      en: "🖥️ Okki Console Panel",
+      ru: "🖥️ Okki Консоль Панель",
+      kk: "🖥️ Okki Консоль Панелі",
+    },
+    desc: {
+      en: "Lightweight local web file explorer with system info, extensions, and code preview — all in one clean dashboard.",
+      ru: "Локальный веб-проводник с информацией о системе, расширениями и предпросмотром кода в одном интерфейсе.",
+      kk: "Жергілікті веб-файл шолғышы: жүйе ақпараты, кеңейтімдер және код алдын ала қарау бір интерфейсте.",
+    },
     repo: "https://github.com/DreamerView/okki-console-panel",
-    image: consoleImg
+    image: consoleImg,
   },
   {
-    title: "📃 Okki Pages",
-    desc: "Okki Pages is a flexible online platform to create, customize, and publish notes or articles directly in the browser.",
+    title: {
+      en: "📃 Okki Pages",
+      ru: "📃 Okki Страницы",
+      kk: "📃 Okki Беттер",
+    },
+    desc: {
+      en: "Okki Pages is a flexible online platform to create, customize, and publish notes or articles directly in the browser.",
+      ru: "Гибкая платформа для создания и публикации заметок и статей прямо в браузере.",
+      kk: "Шолғыш арқылы жазбалар мен мақалаларды жасауға және жариялауға арналған икемді онлайн-платформа.",
+    },
     demo: "https://folio.kz",
     repo: "https://github.com/DreamerView/okki-pages",
-    image: pagesImg
+    image: pagesImg,
   },
   {
-      title: "💻 SimpleML",
-      desc: "A simple web app for miniML – a custom Russian DSL for interactive markup input with instant HTML preview.",
-      demo: "https://dreamerview.github.io/simple-ml/",
-      repo: "https://github.com/DreamerView/simple-ml",
-      image: simpleMlImg
+    title: {
+      en: "💻 SimpleML",
+      ru: "💻 SimpleML — язык miniML",
+      kk: "💻 SimpleML — miniML тілі",
+    },
+    desc: {
+      en: "A simple web app for miniML – a custom Russian DSL for interactive markup input with instant HTML preview.",
+      ru: "Простой веб-интерфейс для языка miniML — кастомный DSL для разметки с мгновенным HTML-просмотром.",
+      kk: "miniML тіліне арналған қарапайым веб-қосымша — HTML алдын ала қарау мүмкіндігімен интерактивті енгізу үшін.",
+    },
+    demo: "https://dreamerview.github.io/simple-ml/",
+    repo: "https://github.com/DreamerView/simple-ml",
+    image: simpleMlImg,
   },
   {
-      title: "📊 Excel Preview",
-      desc: "Excel Preview is a lightweight web app to view .xlsx files in a spreadsheet-like table directly in the browser.",
-      repo: "https://github.com/DreamerView/excel-preview",
-      image: excelPreviewImg
+    title: {
+      en: "📊 Excel Preview",
+      ru: "📊 Excel Просмотрщик",
+      kk: "📊 Excel Қарау Құралы",
+    },
+    desc: {
+      en: "Excel Preview is a lightweight web app to view .xlsx files in a spreadsheet-like table directly in the browser.",
+      ru: "Легкое веб-приложение для просмотра .xlsx файлов в виде таблицы прямо в браузере.",
+      kk: ".xlsx файлдарын тікелей браузерде кесте ретінде көруге арналған жеңіл веб-қосымша.",
+    },
+    repo: "https://github.com/DreamerView/excel-preview",
+    image: excelPreviewImg,
   },
   {
-      title: "🖼  Keskin — Smart Image Editor",
-      desc: "Keskin — a minimal, fast, offline-ready browser image editor. No install or signup. Instant edits for devs & designers. ",
-      demo:"https://keskin.vercel.app",
-      repo: "https://github.com/DreamerView/keskin",
-      image: keskinImg
-  }
+    title: {
+      en: "🖼  Keskin — Smart Image Editor",
+      ru: "🖼  Keskin — Умный Редактор Изображений",
+      kk: "🖼  Keskin — Ақылды Сурет Өңдегіш",
+    },
+    desc: {
+      en: "Keskin — a minimal, fast, offline-ready browser image editor. No install or signup. Instant edits for devs & designers.",
+      ru: "Keskin — минималистичный, быстрый редактор изображений в браузере. Не требует установки или регистрации.",
+      kk: "Keskin — орнатусыз, тіркеусіз жұмыс істейтін жылдам және жеңіл сурет редакторы.",
+    },
+    demo: "https://keskin.vercel.app",
+    repo: "https://github.com/DreamerView/keskin",
+    image: keskinImg,
+  },
 ];
 
 export default list;

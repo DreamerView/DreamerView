@@ -8,32 +8,72 @@ import contentMarketingBasicsImg from '@/public/images/certificates/content-mark
 
 const list = [
   {
-    title: "Semrush SEO Crash Course with Brian Dean",
-    desc: "Issued Jun 2025",
+    title: {
+      en: "Semrush SEO Crash Course with Brian Dean",
+      ru: "Интенсивный курс по SEO от Semrush с Брайаном Дином",
+      kk: "Semrush SEO экспресс-курсы (Брайан Динмен)",
+    },
+    desc: {
+      en: "Issued Jun 2025",
+      ru: "Выдано в июне 2025",
+      kk: "2025 жылдың маусымында берілді",
+    },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/responsive-web-design",
     image: responsiveWebDesignImg
   },
   {
-    title: "JavaScript Algorithms and Data Structures",
-    desc: "Issued Jun 2025",
+    title: {
+      en: "JavaScript Algorithms and Data Structures",
+      ru: "Алгоритмы и структуры данных на JavaScript",
+      kk: "JavaScript алгоритмдері мен деректер құрылымдары",
+    },
+    desc: {
+      en: "Issued Jun 2025",
+      ru: "Выдано в июне 2025",
+      kk: "2025 жылдың маусымында берілді",
+    },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/javascript-algorithms-and-data-structures-v8",
     image: jsImg
   },
   {
-    title: "Legacy JavaScript Algorithms and Data Structures",
-    desc: "Issued Jun 2025",
+    title: {
+      en: "Legacy JavaScript Algorithms and Data Structures",
+      ru: "Устаревшие алгоритмы и структуры данных на JavaScript",
+      kk: "Ескі JavaScript алгоритмдері мен деректер құрылымдары",
+    },
+    desc: {
+      en: "Issued Jun 2025",
+      ru: "Выдано в июне 2025",
+      kk: "2025 жылдың маусымында берілді",
+    },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/javascript-algorithms-and-data-structures",
     image: legacyJsImg
   },
   {
-    title: "Responsive Web Design",
-    desc: "Issued Jun 2025",
+    title: {
+      en: "Responsive Web Design",
+      ru: "Адаптивная веб-разработка",
+      kk: "Адаптивті веб-дизайн",
+    },
+    desc: {
+      en: "Issued Jun 2025",
+      ru: "Выдано в июне 2025",
+      kk: "2025 жылдың маусымында берілді",
+    },
     demo: "https://static.semrush.com/academy/certificates/ccb31cebbe/temirkhan-rustemov_2.pdf",
     image: seoImg
   },
   {
-    title: "Content Marketing Basics",
-    desc: "Issued Jun 2025",
+    title: {
+      en: "Content Marketing Basics",
+      ru: "Основы контент-маркетинга",
+      kk: "Контент-маркетинг негіздері",
+    },
+    desc: {
+      en: "Issued Jun 2025",
+      ru: "Выдано в июне 2025",
+      kk: "2025 жылдың маусымында берілді",
+    },
     demo: "https://www.mygreatlearning.com/certificate/VOXXAOLY",
     image: contentMarketingBasicsImg
   },

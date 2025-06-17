@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-const AppList = ({list}) => {
+const AppList = ({list,locale}) => {
     const openFullImage = (src,title) => {
         if (typeof window === 'undefined') return;
 
@@ -54,10 +54,10 @@ const AppList = ({list}) => {
                                 />
                             </div>
 
-                            <h6 className="m-0 my-3">{html.title}</h6>
+                            <h6 className="m-0 my-3">{html.title[locale]}</h6>
                             {html.desc && (
                                 <p className="m-0 mt-2 text-secondary mb-3" style={{ fontSize: '0.9rem' }}>
-                                    {html.desc}
+                                    {html.desc[locale]}
                                 </p>
                             )}
                             {html.demo && (

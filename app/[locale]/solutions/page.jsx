@@ -1,6 +1,7 @@
 import jsonList from './list.js';
 
-const SolutionSection = () => {
+const SolutionSection = async({params}) => {
+    const {locale} = await params;
     return (
         <div className='container'>
             <div className="w-100">
@@ -15,9 +16,9 @@ const SolutionSection = () => {
                         {jsonList.map((html, index) => (
                             <tr key={index}>
                                 <td>
-                                    <h5>{html.title}</h5>
+                                    <h5>{html.title[locale]}</h5>
                                     <p className="m-0 mt-3 text-secondary" style={{ fontSize: "0.9rem" }}>
-                                        {html.desc}
+                                        {html.desc[locale]}
                                     </p>
                                 </td>
                                 <td className="align-middle">
