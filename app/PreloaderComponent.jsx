@@ -31,26 +31,13 @@ export default function PreloaderComponent() {
 
   useEffect(() => {
     resources.forEach(({ type, src, font }) => {
-      // preload font if font:true
-      if (type === 'css' && font) {
-        const preload = document.createElement('link');
-        preload.rel = 'preload';
-        preload.as = 'font';
-        preload.type = 'font/woff2';
-        preload.href = src.replace('.css', '/fonts/bootstrap-icons.woff2'); // или укажи точный url
-        preload.crossOrigin = 'anonymous';
-        document.head.appendChild(preload);
-
-        // wait for font ready for this resource
-        document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
-      }
-
       if (type === 'css') {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = src;
         link.onload = () => setLoadedCount((c) => c + 1);
         document.head.appendChild(link);
+        if(font) document.fonts.ready.then(() => setFontsReadyCount((c) => c + 1));
       } else if (type === 'js') {
         const script = document.createElement('script');
         script.src = src;
