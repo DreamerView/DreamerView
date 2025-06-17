@@ -21,7 +21,7 @@ export default function HeaderSection({ locale }) {
 
   return (
     <>
-      <LanguageSwitcherModal currentLocale={locale} pathname={pathname} />
+      <LanguageSwitcherModal currentLocale={locale} pathname={pathname} title={translate['langSelect'][locale]} />
       <header className="container d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
         <button
           className="btn btn-outline-dark border rounded-5"

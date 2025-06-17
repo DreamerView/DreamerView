@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-export default function LanguageSwitcherModal({ currentLocale, pathname }) {
+export default function LanguageSwitcherModal({ currentLocale, pathname,title }) {
     const locales = ['kk', 'ru', 'en'];
 
     // Удалим текущую локаль из pathname
@@ -21,7 +21,7 @@ export default function LanguageSwitcherModal({ currentLocale, pathname }) {
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content border-0 shadow rounded-4">
                         <div className="modal-header border-0">
-                            <h5 className="modal-title" id="langModalLabel">🌍 Choose Language</h5>
+                            <h5 className="modal-title" id="langModalLabel">🌍 {title}</h5>
                             <button
                                 type="button"
                                 className="btn-close"
