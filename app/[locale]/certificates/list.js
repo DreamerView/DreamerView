@@ -15,9 +15,9 @@ const list = [
       kk: "Адаптивті веб-дизайн",
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "freeCodeCamp · Issued Jun 2025",
+      ru: "freeCodeCamp · Выдано в июне 2025",
+      kk: "freeCodeCamp · 2025 жылдың маусымында берілді",
     },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/responsive-web-design",
     image: responsiveWebDesignImg
@@ -29,9 +29,9 @@ const list = [
       kk: "JavaScript алгоритмдері мен деректер құрылымдары",
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "freeCodeCamp · Issued Jun 2025",
+      ru: "freeCodeCamp · Выдано в июне 2025",
+      kk: "freeCodeCamp · 2025 жылдың маусымында берілді",
     },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/javascript-algorithms-and-data-structures-v8",
     image: jsImg
@@ -43,9 +43,9 @@ const list = [
       kk: "Ескі JavaScript алгоритмдері мен деректер құрылымдары",
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "freeCodeCamp · Issued Jun 2025",
+      ru: "freeCodeCamp · Выдано в июне 2025",
+      kk: "freeCodeCamp · 2025 жылдың маусымында берілді",
     },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/javascript-algorithms-and-data-structures",
     image: legacyJsImg
@@ -57,9 +57,9 @@ const list = [
       kk: "Semrush SEO экспресс-курсы (Брайан Динмен)",
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "Semrush Academy · Issued Jun 2025",
+      ru: "Semrush Academy · Выдано в июне 2025",
+      kk: "Semrush Academy · 2025 жылдың маусымында берілді",
     },
     demo: "https://static.semrush.com/academy/certificates/ccb31cebbe/temirkhan-rustemov_2.pdf",
     image: seoImg
@@ -71,9 +71,9 @@ const list = [
       kk: "Контент-маркетинг негіздері",
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "GreatLearning · Issued Jun 2025",
+      ru: "GreatLearning · Выдано в июне 2025",
+      kk: "GreatLearning · 2025 жылдың маусымында берілді",
     },
     demo: "https://www.mygreatlearning.com/certificate/VOXXAOLY",
     image: contentMarketingBasicsImg
@@ -85,9 +85,9 @@ const list = [
       kk: "Фронтенд дамыту кітапханалары"
     },
     desc: {
-      en: "Issued Jun 2025",
-      ru: "Выдано в июне 2025",
-      kk: "2025 жылдың маусымында берілді",
+      en: "freeCodeCamp · Issued Jun 2025",
+      ru: "freeCodeCamp · Выдано в июне 2025",
+      kk: "freeCodeCamp · 2025 жылдың маусымында берілді",
     },
     demo: "https://www.freecodecamp.org/certification/fcc-a6268b36-3165-4192-97dd-57db6602e76e/front-end-development-libraries",
     image: frontendDevLibImg
