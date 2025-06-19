@@ -35,4 +35,4 @@
 .skeleton.text-line  { height: 1rem; width: 100%; }
 .skeleton.text-short { height: 1rem; width: 60%; }
 .skeleton.avatar     { height: 48px; width: 48px; border-radius: 50%; }
-.skeleton.card       { height: 180px; width: 100%; }
+.skeleton.card       { width: 100%; }
