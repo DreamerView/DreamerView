@@ -1,0 +1,38 @@
+/* ===== Skeleton-loading (white-theme only) ===== */
+:root {
+  --skeleton-bg: #f0f0f0;            /* базовый светло-серый */
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--skeleton-bg);
+  border-radius: 4px;
+  color: transparent;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.7) 50%,
+    transparent 100%
+  );
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Примеры размеров */
+.skeleton.text-line  { height: 1rem; width: 100%; }
+.skeleton.text-short { height: 1rem; width: 60%; }
+.skeleton.avatar     { height: 48px; width: 48px; border-radius: 50%; }
+.skeleton.card       { height: 180px; width: 100%; }

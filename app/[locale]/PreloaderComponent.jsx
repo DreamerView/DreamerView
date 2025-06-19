@@ -33,6 +33,10 @@ export default function PreloaderComponent({ locale = 'en' }) {
     },
     {
       type: 'css',
+      src: '/skeleton.css',
+    },
+    {
+      type: 'css',
       src: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css',
       font: true,
     },
