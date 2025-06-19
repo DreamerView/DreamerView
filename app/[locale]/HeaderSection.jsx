@@ -55,6 +55,7 @@ export default function HeaderSection({ locale }) {
               height={150}
               alt="Temirkhan Rustemov Avatar"
               priority
+              sizes="150px"
             />
           </div>
 
