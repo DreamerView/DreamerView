@@ -1,4 +1,4 @@
-Visit my [website](https://dreamerview.github.io/DreamerView/)
+Visit my [website](https://temirkhan.vercel.app/)
 <details open>
 <summary>🇬🇧 English</summary>
 
