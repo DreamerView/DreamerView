@@ -1,38 +1,92 @@
 /* ===== Skeleton-loading (white-theme only) ===== */
 :root {
-  --skeleton-bg: #f0f0f0;            /* базовый светло-серый */
+    --skeleton-bg: #f0f0f0;
+    /* базовый светло-серый */
 }
 
 .skeleton {
-  position: relative;
-  overflow: hidden;
-  background: var(--skeleton-bg);
-  border-radius: 4px;
-  color: transparent;
+    position: relative;
+    overflow: hidden;
+    background: var(--skeleton-bg);
+    border-radius: 4px;
+    color: transparent;
 }
 
 .skeleton::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255,255,255,0.7) 50%,
-    transparent 100%
-  );
-  animation: skeleton-shimmer 1.4s infinite;
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.7) 50%,
+            transparent 100%);
+    animation: skeleton-shimmer 1.4s infinite;
 }
 
 @keyframes skeleton-shimmer {
-  100% {
-    transform: translateX(100%);
-  }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 /* Примеры размеров */
-.skeleton.text-line  { height: 1rem; width: 100%; }
-.skeleton.text-short { height: 1rem; width: 60%; }
-.skeleton.avatar     { height: 48px; width: 48px; border-radius: 50%; }
-.skeleton.card       { width: 100%; }
+.skeleton.text-line {
+    height: 1rem;
+    width: 100%;
+}
+
+.skeleton.text-short {
+    height: 1rem;
+    width: 60%;
+}
+
+.skeleton.avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+
+.skeleton.card {
+    width: 100%;
+}
+
+/* ключевые кадры: лёгкие повороты + микро-сдвиги */
+@keyframes phone-shake {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+
+    15% {
+        transform: rotate(2deg) translate(1px, -1px);
+    }
+
+    30% {
+        transform: rotate(-2deg) translate(-1px, 1px);
+    }
+
+    45% {
+        transform: rotate(1.5deg) translate(1px, 1px);
+    }
+
+    60% {
+        transform: rotate(-1.5deg)translate(-1px, -1px);
+    }
+
+    75% {
+        transform: rotate(1deg) translate(1px, -1px);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0);
+    }
+}
+
+.vibrate-icon {
+    display: inline-block;
+    animation: phone-shake 0.8s linear infinite;
+}
+
+.vibrate-icon:hover {
+    animation-play-state: paused;
+}

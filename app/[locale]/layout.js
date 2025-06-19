@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import HeaderSection from './HeaderSection';
 import PreloaderComponent from './PreloaderComponent';
 

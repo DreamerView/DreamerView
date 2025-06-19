@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 export default function LanguageSwitcherModal({ currentLocale, pathname,title }) {
     const locales = ['kk', 'ru', 'en'];
 

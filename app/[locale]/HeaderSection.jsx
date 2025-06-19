@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import avatar from '@/public/avatar.webp';
 import translate from '@/translate/header.json';
 import LanguageSwitcherModal from './LanguageSwitcherModal';
+import ContactMeModal from './ContactMeModal';
 
 const NavLinks = [
   { href: '/', title: '👨🏻‍💻', main: 'about' },
@@ -22,6 +23,7 @@ export default function HeaderSection({ locale }) {
   return (
     <>
       <LanguageSwitcherModal currentLocale={locale} pathname={pathname} title={translate['langSelect'][locale]} />
+      <ContactMeModal title={translate['contactMe'][locale]} />
       <header className="container d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
         <button
           className="btn btn-outline-dark border rounded-5"
@@ -31,14 +33,13 @@ export default function HeaderSection({ locale }) {
           🌍 {translate['langSelect'][locale]}
         </button>
 
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-dark rounded-5 d-inline-flex gap-2 align-items-center"
-          href="https://github.com/DreamerView"
+        <button
+          className="btn btn-dark rounded-5 d-inline-flex gap-2 align-items-center vibrate-icon"
+          data-bs-toggle="modal"
+          data-bs-target="#contactMeModal"
         >
-          <i className="bi bi-github"></i>Github
-        </a>
+          <i className='bi bi-phone-vibrate-fill'></i>{translate['contactMe'][locale]}
+        </button>
       </header>
 
       <div className="container">
