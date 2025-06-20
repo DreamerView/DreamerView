@@ -17,13 +17,13 @@ My goal is to create things that actually solve problems.
 ### 🌐 Frontend
 - <img src="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif" width="20"/> **JavaScript / ES6+**
 - <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="20"/> **HTML5 / CSS3 / Bootstrap**
-- ⚡ **Next.js**
+- ⚡ **Next.js**,**React**, **VUE**
 - 🖥 **Electron.js**
 
 ### 🧠 Backend
 - <img src="https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif" width="20"/> **Node.js + Express**
 - 🐘 **PHP**
-- 🐬 **MySQL**
+- 🐬 **MySQL**, **SQLite**, **Firebase**, **MongoDB**
 - 📡 **WebSockets / Socket.IO**
 - 🤖 **Telegram Bot API**
 
