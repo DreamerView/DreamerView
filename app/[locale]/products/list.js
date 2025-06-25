@@ -10,6 +10,7 @@ import excelPreviewImg from '@/public/images/products/excel-preview.webp';
 import keskinImg from '@/public/images/products/keskin.webp';
 import pyToWebImg from '@/public/images/products/py_to_web.webp';
 import reactAudioPlayerImg from '@/public/images/products/react-audio-player.webp';
+import notesAppProImg from '@/public/images/products/notes-app-pro.webp';
 
 const list = [
   {
@@ -130,35 +131,48 @@ const list = [
   },
   {
     title: {
-      en: "🐍  Py-to-Web — Minimal framework",
-      ru: "🐍  Py-to-Web — мини-фреймворк",
-      kk: "🐍  Py-to-Web — шағын фреймворк"
+      en: "🐍 Py-to-Web — Minimal Framework",
+      ru: "🐍 Py-to-Web — Мини-фреймворк",
+      kk: "🐍 Py-to-Web — Шағын Фреймворк"
     },
     desc: {
-      en: "Py-to-Web is a minimal Python-based framework that lets you build web pages using plain Python functions instead of HTML.",
-      ru: "Py-to-Web — это минималистичный фреймворк на Python, позволяющий создавать веб-страницы с помощью обычных Python-функций вместо HTML.",
-      kk: "Py-to-Web — HTML-дің орнына қарапайым Python функцияларын қолданып, веб-парақтарды жасауға мүмкіндік беретін Python негізіндегі шағын фреймворк."
+      en: "Minimal Python framework to build web pages using Python functions instead of HTML. Great for fast prototyping.",
+      ru: "Минималистичный Python-фреймворк для создания веб-страниц без HTML. Идеален для быстрых прототипов.",
+      kk: "HTML орнына Python функцияларын қолданатын шағын веб-фреймворк. Жылдам прототип жасауға ыңғайлы."
     },
     repo: "https://github.com/DreamerView/py-to-web",
     image: pyToWebImg
   },
   {
     title: {
-      en: "🎧 React Audio Player",
-      ru: "🎧 Аудиоплеер на React",
-      kk: "🎧 React аудио плеері"
+      en: "📒 Notes App Pro",
+      ru: "📒 Приложение Заметки Pro",
+      kk: "📒 Ескертпелер Қосымшасы Pro"
     },
     desc: {
-      en: "React Audio Player is a clean and modern audio player built with React and Bootstrap. It supports playlists, playback controls, volume, speed adjustment, and more.",
-      ru: "React Audio Player — это современный и стильный аудиоплеер на React с поддержкой плейлистов, управления воспроизведением, громкости, скорости и других функций.",
-      kk: "React Audio Player — бұл React пен Bootstrap негізінде жасалған заманауи аудиоплеер. Плейлисттер, ойнату басқаруы, дыбыс және жылдамдық реттеуі бар."
+      en: "A minimal Vue 3 app for creating and managing notes using localStorage. Works offline. Built with Vite.",
+      ru: "Минималистичное Vue 3 приложение для создания и хранения заметок в браузере. Работает офлайн.",
+      kk: "Жазбалармен жұмыс істеуге арналған шағын Vue 3 қосымшасы. localStorage қолданады, офлайн жұмыс істейді."
+    },
+    demo: "https://notes-app-pro-three.vercel.app/",
+    repo: "https://github.com/DreamerView/notes-app-pro",
+    image: notesAppProImg
+  },
+  {
+    title: {
+      en: "🎧 React Audio Player",
+      ru: "🎧 Аудиоплеер на React",
+      kk: "🎧 React аудио ойнатқышы"
+    },
+    desc: {
+      en: "A modern React audio player with playlist, volume, speed control, shuffle and repeat. Built with Bootstrap 5.3.",
+      ru: "Современный аудиоплеер на React с плейлистом, громкостью, скоростью, повтором и перемешиванием. Bootstrap 5.3.",
+      kk: "React негізіндегі аудио ойнатқыш. Плейлист, дыбыс, жылдамдық, қайталау және араластыру бар. Bootstrap 5.3."
     },
     demo: "https://react-audio-player-pi.vercel.app/",
     repo: "https://github.com/DreamerView/react-audio-player",
     image: reactAudioPlayerImg
   }
-
-
 ];
 
 export default list;
