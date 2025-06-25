@@ -30,7 +30,7 @@ const translations = {
     tech: {
       js: "🟨 JavaScript / ES6+",
       htmlcss: "🎨 HTML5 / CSS3 / Bootstrap",
-      react: "🚀 React.js",
+      react: "🚀 React.js, Vue.js",
       next: "⚡ Next.js",
       electron: "🖥️ Electron.js",
       node: "🌿 Node.js + Express",
@@ -76,7 +76,7 @@ const translations = {
     tech: {
       js: "🟨 JavaScript / ES6+",
       htmlcss: "🎨 HTML5 / CSS3 / Bootstrap",
-      react: "🚀 React.js",
+      react: "🚀 React.js, Vue.js",
       next: "⚡ Next.js",
       electron: "🖥️ Electron.js",
       node: "🌿 Node.js + Express",
@@ -122,7 +122,7 @@ const translations = {
     tech: {
       js: "🟨 JavaScript / ES6+",
       htmlcss: "🎨 HTML5 / CSS3 / Bootstrap",
-      react: "🚀 React.js",
+      react: "🚀 React.js, Vue.js",
       next: "⚡ Next.js",
       electron: "🖥️ Electron.js",
       node: "🌿 Node.js + Express",
