@@ -8,6 +8,7 @@ import pagesImg from '@/public/images/products/pages.webp';
 import simpleMlImg from '@/public/images/products/simple-ml.webp';
 import excelPreviewImg from '@/public/images/products/excel-preview.webp';
 import keskinImg from '@/public/images/products/keskin.webp';
+import pyToWebImg from '@/public/images/products/py_to_web.webp';
 
 const list = [
   {
@@ -126,6 +127,21 @@ const list = [
     repo: "https://github.com/DreamerView/keskin",
     image: keskinImg,
   },
+  {
+    title: {
+      en: "🐍  Py-to-Web — Minimal framework",
+      ru: "🐍  Py-to-Web — мини-фреймворк",
+      kk: "🐍  Py-to-Web — шағын фреймворк"
+    },
+    desc: {
+      en: "Py-to-Web is a minimal Python-based framework that lets you build web pages using plain Python functions instead of HTML.",
+      ru: "Py-to-Web — это минималистичный фреймворк на Python, позволяющий создавать веб-страницы с помощью обычных Python-функций вместо HTML.",
+      kk: "Py-to-Web — HTML-дің орнына қарапайым Python функцияларын қолданып, веб-парақтарды жасауға мүмкіндік беретін Python негізіндегі шағын фреймворк."
+    },
+    repo: "https://github.com/DreamerView/py-to-web",
+    image: pyToWebImg
+  }
+
 ];
 
 export default list;
