@@ -9,6 +9,7 @@ import simpleMlImg from '@/public/images/products/simple-ml.webp';
 import excelPreviewImg from '@/public/images/products/excel-preview.webp';
 import keskinImg from '@/public/images/products/keskin.webp';
 import pyToWebImg from '@/public/images/products/py_to_web.webp';
+import reactAudioPlayerImg from '@/public/images/products/react-audio-player.webp';
 
 const list = [
   {
@@ -140,7 +141,23 @@ const list = [
     },
     repo: "https://github.com/DreamerView/py-to-web",
     image: pyToWebImg
+  },
+  {
+    title: {
+      en: "🎧 React Audio Player",
+      ru: "🎧 Аудиоплеер на React",
+      kk: "🎧 React аудио плеері"
+    },
+    desc: {
+      en: "React Audio Player is a clean and modern audio player built with React and Bootstrap. It supports playlists, playback controls, volume, speed adjustment, and more.",
+      ru: "React Audio Player — это современный и стильный аудиоплеер на React с поддержкой плейлистов, управления воспроизведением, громкости, скорости и других функций.",
+      kk: "React Audio Player — бұл React пен Bootstrap негізінде жасалған заманауи аудиоплеер. Плейлисттер, ойнату басқаруы, дыбыс және жылдамдық реттеуі бар."
+    },
+    demo: "https://react-audio-player-pi.vercel.app/",
+    repo: "https://github.com/DreamerView/react-audio-player",
+    image: reactAudioPlayerImg
   }
+
 
 ];
 
