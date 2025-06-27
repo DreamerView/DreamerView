@@ -6,8 +6,68 @@ import legacyJsImg from '@/public/images/certificates/legacy-javascript.webp';
 import seoImg from '@/public/images/certificates/seo.webp';
 import contentMarketingBasicsImg from '@/public/images/certificates/content-marketing-basics.webp';
 import frontendDevLibImg from '@/public/images/certificates/frontend-development-libraries.webp';
+import metaIntroductionFrontendImg from '@/public/images/certificates/meta-introduction-frontend.webp';
+import metaProgWithJsImg from '@/public/images/certificates/meta-programming-with-js.webp';
+import metaVersionControlImg from '@/public/images/certificates/meta-version-control.webp';
+import metaHtmlCssImg from '@/public/images/certificates/meta-html-css.webp';
 
 const list = [
+  {
+    title: {
+      en: "Introduction to Front-End Development",
+      ru: "Введение в Front-End разработку",
+      kk: "Front-End дамуына кіріспе"
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/2FYJEV6RBY2V",
+    image: metaIntroductionFrontendImg
+  },
+  {
+    title: {
+      en: "Programming with JavaScript",
+      ru: "Программирование на JavaScript",
+      kk: "JavaScript тілінде бағдарламалау"
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/RL7DBPW4K4F0",
+    image: metaProgWithJsImg
+  },
+  {
+    title: {
+      en: "Version Control",
+      ru: "Система контроля версий",
+      kk: "Нұсқаларды басқару жүйесі"
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/DIX1GDP9USC3",
+    image: metaVersionControlImg
+  },
+  {
+    title: {
+      en: "HTML and CSS in depth",
+      ru: "Углублённое изучение HTML и CSS",
+      kk: "HTML мен CSS-ті тереңдетіп оқу"
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/4Y9LM9QHOJ0V",
+    image: metaHtmlCssImg
+  },
   {
     title: {
       en: "Responsive Web Design",
