@@ -10,6 +10,7 @@ import metaIntroductionFrontendImg from '@/public/images/certificates/meta-intro
 import metaProgWithJsImg from '@/public/images/certificates/meta-programming-with-js.webp';
 import metaVersionControlImg from '@/public/images/certificates/meta-version-control.webp';
 import metaHtmlCssImg from '@/public/images/certificates/meta-html-css.webp';
+import metaReactBasicsImg from '@/public/images/certificates/meta-react-basics.webp';
 
 const list = [
   {
@@ -67,6 +68,20 @@ const list = [
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/4Y9LM9QHOJ0V",
     image: metaHtmlCssImg
+  },
+  {
+    title: {
+      en: "React Basics",
+      ru: "Основы React",
+      kk: "React негіздері"
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/VJKRBBFLYZ48",
+    image: metaReactBasicsImg
   },
   {
     title: {
