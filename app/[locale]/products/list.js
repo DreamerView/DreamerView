@@ -11,6 +11,7 @@ import keskinImg from '@/public/images/products/keskin.webp';
 import pyToWebImg from '@/public/images/products/py_to_web.webp';
 import reactAudioPlayerImg from '@/public/images/products/react-audio-player.webp';
 import notesAppProImg from '@/public/images/products/notes-app-pro.webp';
+import promptyPreviewImg from "@/public/images/products/prompty.webp"
 
 const list = [
   {
@@ -172,7 +173,23 @@ const list = [
     demo: "https://react-audio-player-pi.vercel.app/",
     repo: "https://github.com/DreamerView/react-audio-player",
     image: reactAudioPlayerImg
+  },
+  {
+    title: {
+      en: "🧠 Prompty — AI Prompt Explorer",
+      ru: "🧠 Prompty — исследователь AI-промптов",
+      kk: "🧠 Prompty — AI промпт шолушы"
+    },
+    desc: {
+      en: "Visual gallery of prompts for AI image generation. Filters, tags and beautiful layout — no login required.",
+      ru: "Визуальная галерея промптов для генерации AI-изображений. Фильтры, теги и красивая подача — без регистрации.",
+      kk: "AI кескін жасауға арналған промпттар галереясы. Фильтрлер, тегтер және әдемі интерфейс — тіркеусіз."
+    },
+    demo: "https://prompty-kappa.vercel.app/",
+    repo: "https://github.com/DreamerView/prompty", // если есть, иначе убери
+    image: promptyPreviewImg // заменишь на свою переменную или путь
   }
+
 ];
 
 export default list;
