@@ -1,4 +1,4 @@
-<h1 align="center">Hi there 👋</h1>
+<h2 align="center">Hi there 👋</h2>
 <p align="center">
   I'm Temirkhan — Full-Stack Dev & Indie Maker<br>
   🔗 <a href="https://founder.okki.kz" target="_blank">founder.okki.kz</a> — always up to date
