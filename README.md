@@ -1,4 +1,4 @@
-<h1 align="center">Hi there 👋</h1>
+<h1 align="center">Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/></h1>
 <p align="center">
   I'm Temirkhan — Full-Stack Dev & Indie Maker<br>
   🔗 <a href="https://founder.okki.kz" target="_blank">founder.okki.kz</a> — always up to date
