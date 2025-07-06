@@ -11,6 +11,8 @@ import metaProgWithJsImg from '@/public/images/certificates/meta-programming-wit
 import metaVersionControlImg from '@/public/images/certificates/meta-version-control.webp';
 import metaHtmlCssImg from '@/public/images/certificates/meta-html-css.webp';
 import metaReactBasicsImg from '@/public/images/certificates/meta-react-basics.webp';
+import metaAdvancedReactImg from '@/public/images/certificates/meta-advanced-react.webp';
+import metaUiUxImg from '@/public/images/certificates/meta-principles-of-ui-ux-design.webp';
 
 const list = [
   {
@@ -82,6 +84,34 @@ const list = [
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/VJKRBBFLYZ48",
     image: metaReactBasicsImg
+  },
+  {
+    title: {
+      "en": "Advanced React",
+      "ru": "Продвинутый React",
+      "kk": "Күрделі React"
+    },
+    desc: {
+      "en": "Meta · Issued Jul 2025",
+      "ru": "Meta · Выдано в июле 2025 года",
+      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/ERSFA32Q0SUD",
+    image: metaAdvancedReactImg
+  },
+  {
+    title: {
+      "en": "Principles of UX/UI Design",
+      "ru": "Принципы UX/UI-дизайна",
+      "kk": "UX/UI дизайн қағидалары"
+    },
+    desc: {
+      "en": "Meta · Issued Jul 2025",
+      "ru": "Meta · Выдано в июле 2025 года",
+      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/MXAKYOL1KAS4",
+    image: metaUiUxImg
   },
   {
     title: {
