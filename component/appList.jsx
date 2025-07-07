@@ -54,7 +54,7 @@ const AppList = ({list,locale}) => {
                                 />
                             </div>
 
-                            <h6 className="m-0 my-3">{html.title[locale]}</h6>
+                            <h6 className="m-0 my-3 lh-base">{html.title[locale]}</h6>
                             {html.desc && (
                                 <p className="m-0 mt-2 text-secondary mb-3" style={{ fontSize: '0.9rem' }}>
                                     {html.desc[locale]}
