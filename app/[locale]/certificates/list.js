@@ -13,6 +13,7 @@ import metaHtmlCssImg from '@/public/images/certificates/meta-html-css.webp';
 import metaReactBasicsImg from '@/public/images/certificates/meta-react-basics.webp';
 import metaAdvancedReactImg from '@/public/images/certificates/meta-advanced-react.webp';
 import metaUiUxImg from '@/public/images/certificates/meta-principles-of-ui-ux-design.webp';
+import metaFrontendCapstoneImg from '@/public/images/certificates/meta-frontend-developer-capstone.webp'
 
 const list = [
   {
@@ -112,6 +113,20 @@ const list = [
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/MXAKYOL1KAS4",
     image: metaUiUxImg
+  },
+  {
+    title: {
+      kk: "Фронт-енд әзірлеуші бойынша қорытынды жоба",
+      ru: "Итоговый проект фронтенд-разработчика",
+      en: "Front-End Developer Capstone"
+    },
+    desc: {
+      "en": "Meta · Issued Jul 2025",
+      "ru": "Meta · Выдано в июле 2025 года",
+      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/RK01RFIWXCK1",
+    image: metaFrontendCapstoneImg
   },
   {
     title: {
