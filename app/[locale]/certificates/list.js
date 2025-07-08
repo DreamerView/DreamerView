@@ -14,8 +14,24 @@ import metaReactBasicsImg from '@/public/images/certificates/meta-react-basics.w
 import metaAdvancedReactImg from '@/public/images/certificates/meta-advanced-react.webp';
 import metaUiUxImg from '@/public/images/certificates/meta-principles-of-ui-ux-design.webp';
 import metaFrontendCapstoneImg from '@/public/images/certificates/meta-frontend-developer-capstone.webp'
+import metaCodingInterviewPreparationImg from '@/public/images/certificates/meta-coding-interview-preparation.webp'
+import metaCertifiedFrontendDevImg from '@/public/images/certificates/certified-by-meta-frontend-developer.webp'
 
 const list = [
+  {
+    title: {
+      kk: "Meta растайтын Front-End әзірлеуші.",
+      ru: "Сертифицированный Front-End разработчик от Meta.",
+      en: "Meta Certified Front-End Developer."
+    },
+    desc: {
+      en: "Meta · Issued Jun 2025",
+      ru: "Meta · Выдано в июне 2025",
+      kk: "Meta · 2025 жылдың маусымында берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/specialization/G7IIW8Q2RNVJ",
+    image: metaCertifiedFrontendDevImg
+  },
   {
     title: {
       en: "Introduction to Front-End Development",
@@ -127,6 +143,20 @@ const list = [
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/RK01RFIWXCK1",
     image: metaFrontendCapstoneImg
+  },
+  {
+    title: {
+      kk: "Кодинг сұхбатына дайындық",
+      ru: "Подготовка к собеседованию по программированию",
+      en: "Coding Interview Preparation"
+    },
+    desc: {
+      "en": "Meta · Issued Jul 2025",
+      "ru": "Meta · Выдано в июле 2025 года",
+      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/LSGQS6JHCLQ0",
+    image: metaCodingInterviewPreparationImg
   },
   {
     title: {
