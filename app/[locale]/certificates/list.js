@@ -22,7 +22,7 @@ const list = [
     title: {
       kk: "Meta растайтын Front-End әзірлеуші.",
       ru: "Сертифицированный Front-End разработчик от Meta.",
-      en: "Meta Certified Front-End Developer."
+      en: `Meta Certified Front-End Developer.`
     },
     desc: {
       en: "Meta · Issued Jun 2025",
