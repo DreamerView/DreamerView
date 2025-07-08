@@ -16,6 +16,7 @@ import metaUiUxImg from '@/public/images/certificates/meta-principles-of-ui-ux-d
 import metaFrontendCapstoneImg from '@/public/images/certificates/meta-frontend-developer-capstone.webp'
 import metaCodingInterviewPreparationImg from '@/public/images/certificates/meta-coding-interview-preparation.webp'
 import metaCertifiedFrontendDevImg from '@/public/images/certificates/certified-by-meta-frontend-developer.webp'
+import metaIntroductionToBackendImg from '@/public/images/certificates/meta-introduction-to-backend.webp'
 
 const list = [
   {
@@ -25,9 +26,9 @@ const list = [
       en: `Meta Certified Front-End Developer.`
     },
     desc: {
-      en: "Meta · Issued Jun 2025",
-      ru: "Meta · Выдано в июне 2025",
-      kk: "Meta · 2025 жылдың маусымында берілді",
+      en: "Meta · Issued Jul 2025",
+      ru: "Meta · Выдано в июле 2025",
+      kk: "Meta · 2025 жылдың шілдесінде берілді",
     },
     demo: "https://www.coursera.org/account/accomplishments/specialization/G7IIW8Q2RNVJ",
     image: metaCertifiedFrontendDevImg
@@ -104,14 +105,14 @@ const list = [
   },
   {
     title: {
-      "en": "Advanced React",
-      "ru": "Продвинутый React",
-      "kk": "Күрделі React"
+      en: "Advanced React",
+      ru: "Продвинутый React",
+      kk: "Күрделі React"
     },
     desc: {
-      "en": "Meta · Issued Jul 2025",
-      "ru": "Meta · Выдано в июле 2025 года",
-      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+      en: "Meta · Issued Jul 2025",
+      ru: "Meta · Выдано в июле 2025 года",
+      kk: "Meta · 2025 жылдың шілдесінде берілді"
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/ERSFA32Q0SUD",
     image: metaAdvancedReactImg
@@ -157,6 +158,20 @@ const list = [
     },
     demo: "https://www.coursera.org/account/accomplishments/verify/LSGQS6JHCLQ0",
     image: metaCodingInterviewPreparationImg
+  },
+  {
+    title: {
+      en: "Introduction to Back-End Development",
+      ru: "Введение в бэкенд-разработку",
+      kk: "Бэк-енд әзірлеуге кіріспе"
+    },
+    desc: {
+      "en": "Meta · Issued Jul 2025",
+      "ru": "Meta · Выдано в июле 2025 года",
+      "kk": "Meta · 2025 жылдың шілдесінде берілді"
+    },
+    demo: "https://www.coursera.org/account/accomplishments/verify/GG5DDGMEPPSE",
+    image: metaIntroductionToBackendImg
   },
   {
     title: {
