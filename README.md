@@ -39,3 +39,10 @@
       alt="Top Languages" />
   </picture>
 </p>
+
+## ❤️ Heart On Your Sleeve
+
+I believe in kindness, respect, and compassion for all people.  
+Love, peace, and empathy can unite us beyond borders and beliefs.  
+🌍 Everyone deserves support and dignity.  
+🤲 Let’s treat each other with mercy and respect — the way we wish to be treated ourselves.
