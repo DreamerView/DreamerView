@@ -15,10 +15,25 @@ import metaAdvancedReactImg from '@/public/images/certificates/meta-advanced-rea
 import metaUiUxImg from '@/public/images/certificates/meta-principles-of-ui-ux-design.webp';
 import metaFrontendCapstoneImg from '@/public/images/certificates/meta-frontend-developer-capstone.webp'
 import metaCodingInterviewPreparationImg from '@/public/images/certificates/meta-coding-interview-preparation.webp'
-import metaCertifiedFrontendDevImg from '@/public/images/certificates/certified-by-meta-frontend-developer.webp'
 import metaIntroductionToBackendImg from '@/public/images/certificates/meta-introduction-to-backend.webp'
+import metaCertifiedFrontendDevImg from '@/public/images/certificates/certified-by-meta-frontend-developer.webp'
+import metaCertifiedFullStackDevImg from '@/public/images/certificates/certified-by-meta-fullstack-developer.webp'
 
 const list = [
+  {
+    title: {
+      kk: "Meta растайтын Full-Stack әзірлеуші.",
+      ru: "Сертифицированный Full-Stack разработчик от Meta.",
+      en: `Meta Certified Full-Stack Developer.`
+    },
+    desc: {
+      en: "Meta · Issued Jul 2025",
+      ru: "Meta · Выдано в июле 2025",
+      kk: "Meta · 2025 жылдың шілдесінде берілді",
+    },
+    demo: "https://www.coursera.org/account/accomplishments/specialization/5R6KKAWN45NQ",
+    image: metaCertifiedFullStackDevImg
+  },
   {
     title: {
       kk: "Meta растайтын Front-End әзірлеуші.",
