@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@notionhq/client": "^5.4.0",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "next": "15.3.3",

@@ -3,12 +3,12 @@ const AppListPreloader = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container-xl">
         <div className="row mx-auto">
           {list.map((key) => (
             <div
               key={key}
-              className="col-xl-3 col-lg-4 col-md-6 col-12 mb-4"
+              className="col-lg-4 col-md-6 col-12 mb-4"
             >
               <div
                 className="skeleton card border-0 rounded-4"

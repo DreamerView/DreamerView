@@ -10,8 +10,6 @@ import ContactMeModal from './ContactMeModal';
 
 const NavLinks = [
   { href: '/', title: '👨🏻‍💻', main: 'about' },
-  { href: '/apps', title: '📲', main: 'apps' },
-  { href: '/solutions', title: '🚀', main: 'solutions' },
   { href: '/products', title: '📦', main: 'products' },
   { href: '/works', title: '🗂️', main: 'works' },
   { href: '/certificates', title: '🎓', main: 'certificates' },
@@ -24,7 +22,7 @@ export default function HeaderSection({ locale }) {
     <>
       <LanguageSwitcherModal currentLocale={locale} pathname={pathname} title={translate['langSelect'][locale]} />
       <ContactMeModal title={translate['contactMe'][locale]} />
-      <header className="container d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
+      <header className="container-xl d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
         <button
           className="btn btn-outline-dark border rounded-5"
           data-bs-toggle="modal"

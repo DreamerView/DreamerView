@@ -1,6 +1,7 @@
 // app/[locale]/page.jsx
 import translations from './list.js';
 
+// ⬇️ NEXT.JS SERVER COMPONENT
 export default async function HomePage({ params }) {
   const { locale } = await params;
   const t = translations[locale] || translations['en'];
@@ -9,6 +10,8 @@ export default async function HomePage({ params }) {
     <div className="container">
       <div className="w-100 component" id="my-info">
         <div className="row gap-4 gap-md-0">
+
+          {/* LEFT BLOCK */}
           <div className="col-lg-4 col-md-6 col-12">
             <div className="bg-body-tertiary border rounded-5 p-4 text-white" data-bs-theme="dark">
               <h4 className="m-0 pb-3 mb-3 border-bottom">
@@ -24,6 +27,7 @@ export default async function HomePage({ params }) {
             </div>
           </div>
 
+          {/* SKILLS */}
           <div className="col-lg-8 col-md-6 col-12">
             <div className="bg-body-tertiary border rounded-5 p-4 text-white" data-bs-theme="dark">
               <div className="row gap-5 gap-md-0">
@@ -35,6 +39,7 @@ export default async function HomePage({ params }) {
                   <p className="m-0 mb-3" style={{ fontSize: '0.9rem' }}>{t.tech.next}</p>
                   <p className="m-0" style={{ fontSize: '0.9rem' }}>{t.tech.electron}</p>
                 </div>
+
                 <div className="col-md-4">
                   <h4 className="m-0 mb-4 pb-3 border-bottom">{t.backend}</h4>
                   <p className="m-0 mb-3" style={{ fontSize: '0.9rem' }}>{t.tech.node}</p>
@@ -44,6 +49,7 @@ export default async function HomePage({ params }) {
                   <p className="m-0 mb-3" style={{ fontSize: '0.9rem' }}>{t.tech.telegram}</p>
                   <p className="m-0" style={{ fontSize: '0.9rem' }}>{t.tech.python}</p>
                 </div>
+
                 <div className="col-md-4">
                   <h4 className="m-0 mb-4 pb-3 border-bottom">{t.devtools}</h4>
                   <p className="m-0 mb-3" style={{ fontSize: '0.9rem' }}>{t.tech.linux}</p>
@@ -56,6 +62,7 @@ export default async function HomePage({ params }) {
             </div>
           </div>
 
+          {/* VALUES */}
           <div className="col-lg-4 col-md-6 col-12 mt-md-4 mt-0">
             <div className="bg-body-tertiary border rounded-5 p-4 text-white" data-bs-theme="dark">
               <h4 className="m-0 pb-3 mb-3 border-bottom">{t.values}</h4>
@@ -66,6 +73,7 @@ export default async function HomePage({ params }) {
             </div>
           </div>
 
+          {/* CONTACT */}
           <div className="col-lg col-md-6 col-12 mt-md-4 mt-0">
             <div className="bg-body-tertiary border rounded-5 p-4 text-white" data-bs-theme="dark">
               <h4 className="m-0 pb-3 mb-3 border-bottom">{t.stats}</h4>
@@ -88,6 +96,7 @@ export default async function HomePage({ params }) {
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>

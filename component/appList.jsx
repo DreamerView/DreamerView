@@ -1,6 +1,7 @@
 'use client'; // 👈 обязательно
 
 import Image from 'next/image';
+import AppItem from './appItem';
 
 const AppList = ({list,locale}) => {
     const openFullImage = (src,title) => {
@@ -33,44 +34,35 @@ const AppList = ({list,locale}) => {
         }
     };
 
+    function getRichTextByLocale(properties, keyPrefix, locale) {
+        const prop = properties?.[`${keyPrefix}_${locale}`];
+        return prop?.rich_text?.map(t => t.plain_text).join("") || "";
+    }
+    function getRichText(prop) { 
+        return prop?.rich_text?.map(t => t.plain_text).join("") || ""; 
+    }
+
+    const sortedList = [...list].sort((a, b) => {
+        const t1 = new Date(a.created_time).getTime();
+        const t2 = new Date(b.created_time).getTime();
+        return t2 - t1; // 🔥 новые → старые
+    });
+
+
 
     return (
         <>
-            <div className="container">
-                <div className="row mx-auto">
-                    {list.map((html, key) => (
-                        <div key={key} className="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
-                            <div className="w-100 h-auto bg-body border rounded-4" style={{ aspectRatio: '17/9' }}>
-                                <Image
-                                    className="w-100 h-auto border rounded-4"
-                                    src={html.image}
-                                    alt={html.title}
-                                    placeholder="blur"
-                                    loading="lazy"
-                                    width={800}
-                                    height={400}
-                                    style={{ objectFit: 'cover', aspectRatio: '17/9', cursor: 'zoom-in' }}
-                                    onClick={() => openFullImage(html.image.src,html.title[locale])} // ✅ правильно
-                                />
-                            </div>
-
-                            <h6 className="m-0 my-3 lh-base">{html.title[locale]}</h6>
-                            {html.desc && (
-                                <p className="m-0 mt-2 text-secondary mb-3" style={{ fontSize: '0.9rem' }}>
-                                    {html.desc[locale]}
-                                </p>
-                            )}
-                            {html.demo && (
-                                <a href={html.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-5 me-2 px-3 py-1" style={{ fontSize: '0.8rem' }}>
-                                    View
-                                </a>
-                            )}
-                            {html.repo && (
-                                <a href={html.repo} target="_blank" rel="noopener noreferrer" className="btn btn-dark rounded-5 px-3 py-1" style={{ fontSize: '0.8rem' }}>
-                                    Github
-                                </a>
-                            )}
-                        </div>
+            <div className="container-xl">
+                <div className="row mx-auto g-4">
+                    {sortedList.map(html => (
+                        <AppItem
+                            key={html.id}
+                            html={html}
+                            locale={locale}
+                            openFullImage={openFullImage}
+                            getRichTextByLocale={getRichTextByLocale}
+                            getRichText={getRichText}
+                        />
                     ))}
                 </div>
             </div>
