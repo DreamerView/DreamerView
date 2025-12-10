@@ -12,7 +12,7 @@ const AppListPreloader = () => {
             >
               <div
                 className="skeleton card border-0 rounded-4"
-                style={{ aspectRatio: '17/9' }}
+                style={{ aspectRatio: '16/9' }}
               />
 
               <h6 className="skeleton text-line m-0 my-3" />

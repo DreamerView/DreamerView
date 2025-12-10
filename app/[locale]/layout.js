@@ -1,5 +1,8 @@
 import HeaderSection from './HeaderSection';
-import PreloaderComponent from './PreloaderComponent';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./skeleton.css"
+import Script from 'next/script';
 
 
 export const metadata = {
@@ -13,9 +16,12 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <body style={{ overflowX: 'hidden' }}>
-        <PreloaderComponent locale={locale} />
         <HeaderSection locale={locale} />
         {children}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
