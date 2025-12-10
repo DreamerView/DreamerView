@@ -9,7 +9,7 @@ export default function LanguageSwitcherModal({ currentLocale, pathname,title })
     return (
         <>
             {/* Bootstrap Modal */}
-            <div
+            <div 
                 className="modal fade"
                 id="langModal"
                 tabIndex="-1"
