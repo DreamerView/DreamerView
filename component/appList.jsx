@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import AppItem from './appItem';
 
-const AppList = ({list,locale}) => {
+const AppList = ({list,locale,database}) => {
     const openFullImage = (src,title) => {
         if (typeof window === 'undefined') return;
 

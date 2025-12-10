@@ -9,7 +9,7 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
 
     // ⬇ skeleton (локальный)
     const skeletonStyle = {
-        width: "100%",
+        width: "100%", 
         height: "100%",
         borderRadius: "16px",
         background: "linear-gradient(90deg, #e0e0e0 0%, #f5f5f5 50%, #e0e0e0 100%)",
