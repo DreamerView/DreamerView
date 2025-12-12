@@ -14,6 +14,13 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
+      <head>
+        <link
+          rel="preconnect"
+          href="https://prod-files-secure.s3.us-west-2.amazonaws.com"
+          crossOrigin=""
+        />
+      </head>
       <body style={{ overflowX: 'hidden' }}>
         <HeaderSection locale={locale} />
         {children}
