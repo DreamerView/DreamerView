@@ -7,6 +7,7 @@ import avatar from '@/public/avatar.webp';
 import translate from '@/translate/header.json';
 import LanguageSwitcherModal from './LanguageSwitcherModal';
 import ContactMeModal from './ContactMeModal';
+import IconCall from '@/component/icons/IconCall';
 
 const NavLinks = [
   { href: '/', title: '👨🏻‍💻', main: 'about' },
@@ -36,7 +37,7 @@ export default function HeaderSection({ locale }) {
           data-bs-toggle="modal"
           data-bs-target="#contactMeModal"
         >
-          <i className='bi bi-phone-vibrate-fill'></i>{translate['contactMe'][locale]}
+          <IconCall width={16} height={16} />{translate['contactMe'][locale]}
         </button>
       </header>
 

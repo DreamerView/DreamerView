@@ -2,6 +2,10 @@
 
 import { useSmartImage } from './hooks/useSmartImage';
 import translate from '@/translate/ui.json';
+import IconTime from "./icons/IconTime";
+import IconEdit from './icons/IconEdit';
+import IconEye from './icons/IconEye';
+import IconGithub from './icons/IconGithub';
 
 export default function AppItem({ html, locale, openFullImage, getRichTextByLocale,getRichText }) {
     const imageUrl = html?.properties?.files?.files?.[0]?.file?.url;
@@ -70,14 +74,16 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
                 <div className="d-flex flex-wrap gap-2 justify-content-between my-3">
                     {/* Остальная часть карточки */}
                     {html?.created_time && (
-                        <p className="m-0 text-muted" style={{ fontSize: '0.8rem' }}>
-                            <i className="bi bi-clock-history"></i>{" "}
+                        <p className="m-0 text-muted d-flex align-items-center gap-1" style={{ fontSize: '0.8rem' }}>
+                            <IconTime width="15" height="15" />
+                            {" "}
                             {html.created_time_formatted}
                         </p>
                     )}
                     {html?.last_edited_time && (
-                        <p className="m-0 text-muted" style={{ fontSize: '0.8rem' }}>
-                            <i className="bi bi-pencil"></i>{" "}
+                        <p className="m-0 text-muted d-flex align-items-center gap-1" style={{ fontSize: '0.8rem' }}>
+                            <IconEdit width="15" height="15" />
+                            {" "}
                             {html.last_edited_time_formatted}
                         </p>
                     )}
@@ -88,14 +94,17 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
                     {getRichText(html.properties.url) && (
                         <a href={getRichText(html.properties.url)} target="_blank" rel="noopener noreferrer"
                         className="btn btn-dark rounded-5 me-2 px-3 py-1 d-flex align-items-center gap-2" style={{ fontSize: '0.9rem' }}>
-                            <i className="bi bi-globe"></i> {translate['view-btn'][locale]}
+                            <IconEye width={15} height={15} />
+                            {" "}
+                            {translate['view-btn'][locale]}
                         </a>
                     )}
 
                     {getRichText(html.properties.repo) && (
                         <a href={getRichText(html.properties.repo)} target="_blank" rel="noopener noreferrer"
                         className="btn btn-outline-dark rounded-5 px-3 py-1 d-flex align-items-center gap-2" style={{ fontSize: '0.9rem' }}>
-                            <i className="bi bi-github"></i> Github
+                            <IconGithub width={15} height={15} />
+                            {" "}Github
                         </a>
                     )}
                 </div>
