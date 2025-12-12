@@ -8,7 +8,7 @@ const AppListPreloader = () => {
           {list.map((key) => (
             <div
               key={key}
-              className="col-lg-4 col-md-6 col-12 px-sm-3 px-0"
+              className="col-lg-4 col-md-6 col-12 px-sm-3 px-1"
             >
               <div
                 className="skeleton card border-0 rounded-4"

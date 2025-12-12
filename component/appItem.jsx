@@ -27,7 +27,7 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
                 }
             `}</style>
 
-            <div className="col-lg-4 col-md-6 col-12 px-sm-3 px-0">
+            <div className="col-lg-4 col-md-6 col-12 px-sm-3 px-1">
 
                 <div
                     className="w-100 h-auto bg-body border rounded-4 d-flex justify-content-center align-items-center"
