@@ -7,6 +7,12 @@ import Script from 'next/script';
 export const metadata = {
   title: 'Temirkhan Portfolio',
   description: 'Built with Next.js + Bootstrap',
+  other: {
+    preconnect: [
+      "https://cdn.jsdelivr.net",
+      "https://prod-files-secure.s3.us-west-2.amazonaws.com"
+    ]
+  }
 };
 
 export default async function RootLayout({ children, params }) {
@@ -14,14 +20,6 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
-        <link
-          rel="preconnect"
-          href="https://prod-files-secure.s3.us-west-2.amazonaws.com"
-          crossOrigin=""
-        />
-      </head>
       <body style={{ overflowX: 'hidden' }}>
         <HeaderSection locale={locale} />
         {children}
