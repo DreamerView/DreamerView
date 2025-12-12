@@ -16,5 +16,20 @@ export default async function AppListWrapper({ locale,database }) {
 
     const notionData = await response.json();
 
-    return <AppList list={notionData?.results || []} locale={locale} />
+    const results = Array.isArray(notionData?.results) ? notionData.results : [];
+
+    const preparedList = results.map(item => ({
+        ...item,
+        created_time_formatted: formatDate(item.created_time),
+        last_edited_time_formatted: formatDate(item.last_edited_time),
+    }));
+
+    function formatDate(date) {
+        if (!date) return null;
+
+        return new Date(date).toISOString(); 
+        // ✅ стабильный формат, одинаковый везде
+    }
+
+    return <AppList list={preparedList || []} locale={locale} />
 }
