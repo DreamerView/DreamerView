@@ -72,13 +72,13 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
                     {html?.created_time && (
                         <p className="m-0 text-muted" style={{ fontSize: '0.8rem' }}>
                             <i className="bi bi-clock-history"></i>{" "}
-                            {new Date(html.created_time).toLocaleString()}
+                            {html.created_time_formatted}
                         </p>
                     )}
                     {html?.last_edited_time && (
                         <p className="m-0 text-muted" style={{ fontSize: '0.8rem' }}>
                             <i className="bi bi-pencil"></i>{" "}
-                            {new Date(html.last_edited_time).toLocaleString()}
+                            {html.last_edited_time_formatted}
                         </p>
                     )}
                 </div>
