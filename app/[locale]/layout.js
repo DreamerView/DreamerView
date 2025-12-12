@@ -15,6 +15,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
         <link
           rel="preconnect"
           href="https://prod-files-secure.s3.us-west-2.amazonaws.com"
