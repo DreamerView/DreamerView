@@ -25,10 +25,18 @@ export default async function AppListWrapper({ locale,database }) {
     }));
 
     function formatDate(date) {
-        if (!date) return null;
+        if (!date) return "";
 
-        return new Date(date).toISOString(); 
-        // ✅ стабильный формат, одинаковый везде
+        const d = new Date(date);
+
+        const hours = String(d.getUTCHours()).padStart(2, "0");
+        const minutes = String(d.getUTCMinutes()).padStart(2, "0");
+
+        const day = String(d.getUTCDate()).padStart(2, "0");
+        const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+        const year = d.getUTCFullYear();
+
+        return `${hours}:${minutes}, ${day}.${month}.${year}`;
     }
 
     return <AppList list={preparedList || []} locale={locale} />
