@@ -10,11 +10,11 @@ export default async function AppListWrapper({ locale,database }) {
                 "Notion-Version": "2022-06-28",
                 "Content-Type": "application/json"
             },
-            cache: "no-store"
+            next: { revalidate: 60 }
         }
     );
 
     const notionData = await response.json();
 
-    return <AppList list={notionData?.results || []} locale={locale} />;
+    return <AppList list={notionData?.results || []} locale={locale} />
 }

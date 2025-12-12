@@ -1,6 +1,16 @@
 // app/[locale]/page.jsx
 import translations from './list.js';
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'ru' },
+    { locale: 'kk' }
+  ]
+}
+
+export const revalidate = 60
+
 // ⬇️ NEXT.JS SERVER COMPONENT
 export default async function HomePage({ params }) {
   const { locale } = await params;
