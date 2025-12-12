@@ -52,7 +52,7 @@ const AppList = ({list,locale,database}) => {
 
     return (
         <>
-            <div className="container-xl">
+            <div className="container-xl my-4">
                 <div className="row mx-auto g-4">
                     {sortedList.map(html => (
                         <AppItem
