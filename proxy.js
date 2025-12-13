@@ -12,8 +12,12 @@ export default function proxy(request) {
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname === '/favicon.ico' ||
-    pathname === '/robots.txt' ||
-    pathname === '/sitemap.xml'
+    pathname === '/favicon.svg' ||
+    pathname === '/favicon-96x96.png' ||
+    pathname === '/apple-touch-icon.png' ||
+    pathname === '/web-app-manifest-192x192.png' ||
+    pathname === '/web-app-manifest-512x512.png' ||
+    pathname === '/site.webmanifest' 
   ) {
     return NextResponse.next();
   }
@@ -51,6 +55,6 @@ export default function proxy(request) {
 // чтобы Proxy не трогал статику, _next и т.д.
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|apple-touch-icon.png|favicon-96x96.png|favicon.ico|favicon.svg|site.webmanifest|web-app-manifest-192x192.png|web-app-manifest-512x512.png).*)',
   ],
 };
