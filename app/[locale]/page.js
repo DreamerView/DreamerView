@@ -17,7 +17,7 @@ export default async function HomePage({ params }) {
   const t = translations[locale] || translations['en'];
 
   return (
-    <div className="container">
+    <div className="container-xl">
       <div className="w-100 component" id="my-info">
         <div className="row gap-4 gap-md-0">
 
