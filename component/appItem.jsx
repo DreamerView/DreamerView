@@ -6,10 +6,11 @@ import IconTime from "./icons/IconTime";
 import IconEdit from './icons/IconEdit';
 import IconEye from './icons/IconEye';
 import IconGithub from './icons/IconGithub';
+import Image from 'next/image';
 
 export default function AppItem({ html, locale, openFullImage, getRichTextByLocale,getRichText }) {
     const imageUrl = html?.properties?.files?.files?.[0]?.file?.url;
-    const status = useSmartImage(imageUrl);
+    const { status, onLoad, onError } = useSmartImage();
 
     // ⬇ skeleton (локальный)
     const skeletonStyle = {
@@ -34,32 +35,36 @@ export default function AppItem({ html, locale, openFullImage, getRichTextByLoca
             <div className="col-lg-4 col-md-6 col-12 px-sm-3 px-1">
 
                 <div
-                    className="w-100 h-auto bg-body border rounded-4 d-flex justify-content-center align-items-center"
-                    style={{ aspectRatio: '17/9', overflow: 'hidden' }}
+                className="w-100 bg-body border rounded-4 d-flex justify-content-center align-items-center position-relative"
+                style={{ aspectRatio: '17 / 9', overflow: 'hidden' }}
                 >
+                    <Image
+                        src={imageUrl}
+                        alt={getRichTextByLocale(html.properties, "title", locale)}
+                        priority
+                        fill
+                        className="rounded-4"
+                        style={{ objectFit: 'cover', cursor: 'zoom-in' }}
+                        onClick={() =>
+                        openFullImage(
+                            imageUrl,
+                            getRichTextByLocale(html.properties, "title", locale)
+                        )
+                        }
+                        onLoad={onLoad}
+                        onError={onError}
+                    />
+
                     {status === "loading" && (
-                        <div style={skeletonStyle}></div>
+                        <div style={skeletonStyle} className="position-absolute w-100 h-100"></div>
                     )}
 
                     {status === "error" && (
-                        <p className="text-danger m-0">Image failed to load</p>
-                    )}
-
-                    {status === "success" && (
-                        <img
-                            className="w-100 h-100 rounded-4"
-                            src={imageUrl}
-                            alt={getRichTextByLocale(html.properties, "title", locale)}
-                            style={{ objectFit: 'cover', cursor: 'zoom-in' }}
-                            onClick={() =>
-                                openFullImage(
-                                    imageUrl,
-                                    getRichTextByLocale(html.properties, "title", locale)
-                                )
-                            }
-                        />
+                        <p className="text-danger m-0 position-absolute">Image failed to load</p>
                     )}
                 </div>
+
+
 
                 <h6 className="m-0 my-3 lh-base">
                     {getRichTextByLocale(html.properties, "title", locale)}
