@@ -1,10 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-export function useSmartImage(src, options = {}) {
-  const { defer = true } = options;
-  const [status, setStatus] = useState('loading');
+export function useSmartImage(
+  src,
+  {
+    defer = true,
+    retries = 3,
+    retryDelay = 300, // мс
+  } = {}
+) {
+  const [status, setStatus] = useState('loading'); // loading | success | error
+  const attemptRef = useRef(0);
 
   useEffect(() => {
     if (!src) {
@@ -14,6 +21,10 @@ export function useSmartImage(src, options = {}) {
 
     let cancelled = false;
     let idleId;
+    let timeoutId;
+
+    attemptRef.current = 0;
+    setStatus('loading');
 
     const loadImage = () => {
       if (cancelled) return;
@@ -21,26 +32,43 @@ export function useSmartImage(src, options = {}) {
       const img = new Image();
 
       img.onload = () => {
-        if (!cancelled) setStatus('success');
+        if (!cancelled) {
+          setStatus('success');
+        }
       };
 
       img.onerror = () => {
-        if (!cancelled) setStatus('error');
+        if (cancelled) return;
+
+        if (attemptRef.current < retries - 1) {
+          attemptRef.current += 1;
+
+          timeoutId = setTimeout(() => {
+            loadImage();
+          }, retryDelay);
+        } else {
+          setStatus('error');
+        }
       };
 
       img.src = src;
     };
 
-    if (defer && typeof window !== 'undefined') {
-      if ('requestIdleCallback' in window) {
-        idleId = window.requestIdleCallback(loadImage);
+    const start = () => {
+      if (cancelled) return;
+
+      if (defer && typeof window !== 'undefined') {
+        if ('requestIdleCallback' in window) {
+          idleId = window.requestIdleCallback(loadImage);
+        } else {
+          idleId = setTimeout(loadImage, 200);
+        }
       } else {
-        // fallback для Safari
-        idleId = setTimeout(loadImage, 200);
+        loadImage();
       }
-    } else {
-      loadImage();
-    }
+    };
+
+    start();
 
     return () => {
       cancelled = true;
@@ -50,8 +78,12 @@ export function useSmartImage(src, options = {}) {
       } else if (idleId) {
         clearTimeout(idleId);
       }
+
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
     };
-  }, [src, defer]);
+  }, [src, defer, retries, retryDelay]);
 
   return status;
 }
