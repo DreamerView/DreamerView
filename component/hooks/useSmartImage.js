@@ -2,38 +2,56 @@
 
 import { useEffect, useState } from 'react';
 
-export function useSmartImage(src) {
-  const [status, setStatus] = useState('loading'); // loading | success | error
+export function useSmartImage(src, options = {}) {
+  const { defer = true } = options;
+  const [status, setStatus] = useState('loading');
 
   useEffect(() => {
-    // если src пустой — сразу ошибка
     if (!src) {
       setStatus('error');
       return;
     }
 
     let cancelled = false;
-    const img = new Image();
+    let idleId;
 
-    img.onload = () => {
-      if (!cancelled) {
-        setStatus('success');
-      }
+    const loadImage = () => {
+      if (cancelled) return;
+
+      const img = new Image();
+
+      img.onload = () => {
+        if (!cancelled) setStatus('success');
+      };
+
+      img.onerror = () => {
+        if (!cancelled) setStatus('error');
+      };
+
+      img.src = src;
     };
 
-    img.onerror = () => {
-      if (!cancelled) {
-        setStatus('error');
+    if (defer && typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        idleId = window.requestIdleCallback(loadImage);
+      } else {
+        // fallback для Safari
+        idleId = setTimeout(loadImage, 200);
       }
-    };
+    } else {
+      loadImage();
+    }
 
-    img.src = src;
-
-    // cleanup
     return () => {
       cancelled = true;
+
+      if ('cancelIdleCallback' in window && idleId) {
+        window.cancelIdleCallback(idleId);
+      } else if (idleId) {
+        clearTimeout(idleId);
+      }
     };
-  }, [src]);
+  }, [src, defer]);
 
   return status;
 }
